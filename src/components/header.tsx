@@ -30,7 +30,7 @@ export default function Header() {
           href="/"
           className={`${rubik_glitch.className} text-xl font-bold text-black`}
         >
-          ROTR
+          RISE OF THE REJECTS
         </Link>
 
         {/* Desktop Nav */}
