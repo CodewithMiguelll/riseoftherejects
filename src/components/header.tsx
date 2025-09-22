@@ -44,7 +44,7 @@ export default function Header() {
             {isOpen ? (
               <X className="text-[#121212] w-7 h-7 cursor-pointer" />
             ) : (
-              <Menu className="text-white w-7 h-7 hover:cursor-pointer" />
+              <Menu className="text-[#121212] w-7 h-7 hover:cursor-pointer" />
             )}
           </button>
         </div>
