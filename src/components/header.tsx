@@ -52,7 +52,7 @@ export default function Header() {
 
       {/* Mobile Dropdown */}
       {isOpen && (
-        <div className="md:hidden flex flex-col items-center gap-4 pb-4.5">
+        <div className="md:hidden flex flex-col items-center gap-4 pb-4 px-1.5">
           <Navigation />
 
         </div>
