@@ -1,5 +1,28 @@
 //import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
+import Link from "next/link";
+import { FocusCards } from "@/components/ui/focus-cards";
 import { Button } from "@/components/ui/button";
+
+const cards = [
+  {
+    title: "Uppers",
+    src: "https://images.unsplash.com/photo-1518710843675-2540dd79065c?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description:
+      "The heights gleam bright, but shadows deepen at the base of every tower.",
+  },
+  {
+    title: "Lowers",
+    src: "https://images.unsplash.com/photo-1600271772470-bd22a42787b3?q=80&w=3072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description:
+      "They carry the weight of a world not built for them, yet their hands keep it standing.",
+  },
+  {
+    title: "Rejects",
+    src: "https://images.unsplash.com/photo-1505142468610-359e7d316be0?q=80&w=3070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description:
+      "Cast out, unseen, unwanted — but in the cracks, a fire waits to rise.",
+  },
+];
 
 export default function Home() {
   return (
@@ -15,8 +38,12 @@ export default function Home() {
             kneel.
           </p>
           <div className="flex flex-row gap-3.5 mt-5">
-            <Button>Meet The Characters</Button>
-            <Button variant={"outline"}>Pick A Side</Button>
+            <Link href="/characters">
+              <Button>Meet The Characters</Button>
+            </Link>
+            <Link href="/factions">
+              <Button variant={"outline"}>Pick A Side</Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -24,9 +51,12 @@ export default function Home() {
       {/* FACTIONS SECTION */}
       <section className=" md:py-10 px-4">
         <div>
-          <h1 className="text-2xl md:text-6xl text-center font-bold">
-            Factions
+          <h1 className="text-2xl md:text-4xl text-center font-bold">
+            The Republic is divided... which side are you on?
           </h1>
+        </div>
+        <div className="mt-10 mb-20">
+          <FocusCards cards={cards} />
         </div>
       </section>
     </>
