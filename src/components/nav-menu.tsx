@@ -8,6 +8,7 @@ import {
 const Navigation = () => {
   return (
     <div className="flex justify-center my-6 text-[#121212] font-medium gap-8">
+      {/* //TODO: CHANGE TEXT COLORS WHEN YOU SET UP THE ANIMATED GRADIENT BACKGROUND */}
       <NavigationMenu className="mx-4 flex">
         <NavigationMenuList>
           <NavigationMenuItem>
