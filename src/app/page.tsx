@@ -37,12 +37,14 @@ export default function Home() {
             The Uppers rule, The Lowers endure... but the Rejects refuse to
             kneel.
           </p>
-          <div className="flex flex-row gap-3.5 mt-5">
+          <div className="flex flex-row items-center justify-center gap-3.5 mt-5">
             <Link href="/characters">
-              <Button>Meet The Characters</Button>
+              <Button style={{ padding: "20px" }}>Meet The Characters</Button>
             </Link>
             <Link href="/factions">
-              <Button variant={"outline"}>Pick A Side</Button>
+              <Button variant={"outline"} style={{ padding: "20px" }}>
+                Pick A Side
+              </Button>
             </Link>
           </div>
         </div>
@@ -50,14 +52,40 @@ export default function Home() {
 
       {/* FACTIONS SECTION */}
       <section className=" md:py-10 px-4">
-        <div>
-          <h1 className="text-2xl md:text-4xl text-center font-bold">
-            The Republic is divided... which side are you on?
-          </h1>
-        </div>
-        <div className="mt-10 mb-20">
+        <h1 className="text-2xl md:text-4xl text-center font-bold">
+          The Republic is divided... which side are you on?
+        </h1>
+        <p className="text-sm md:text-base text-center font-medium text-pretty mt-3.5">
+          Choose wisely. Your fate depends on it.
+        </p>
+        <div className="mt-10 mb-12">
           <FocusCards cards={cards} />
         </div>
+        <div className="flex justify-center">
+          <Link href="/factions" className="w-full max-w-sm">
+            <button className="w-full bg-[#121212] text-white font-bold py-3 rounded transition-all duration-100 ease-in-out hover:bg-[#f3f4f6] hover:text-[#121212]">
+              Pick A Side
+            </button>
+          </Link>
+        </div>
+      </section>
+
+      {/* BLOCKQUOTE */}
+      <section className="py-16 px-6 ">
+        <blockquote className="max-w-3xl mx-auto text-center">
+          <p className="text-2xl md:text-4xl font-semibold leading-snug">
+            “We can't just sit and take it like good little boys, if not now,
+            then when?”
+          </p>
+          <footer className="mt-4 text-sm text-[#121212] font-medium">
+            — Omajiri Spokesperson
+          </footer>
+        </blockquote>
+      </section>
+
+      {/* CHARACTERS SPOTLIGHT */}
+      <section>
+        <h1>Meet Out Heroes</h1>
       </section>
     </>
   );
