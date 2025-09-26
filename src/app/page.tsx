@@ -1,7 +1,28 @@
+"use client"
 //import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 import Link from "next/link";
 import { FocusCards } from "@/components/ui/focus-cards";
 import { Button } from "@/components/ui/button";
+import ReactFlipCard from "reactjs-flip-card";
+import Image from "next/image";
+
+const spotlightCharacters = [
+  {
+    name: "Michael",
+    blurb: "The reluctant leader, scarred by loss but driven by hope.",
+    poster: "/images/michael-poster.png",
+  },
+  {
+    name: "Ben",
+    blurb: "A powerhouse with strength that mirrors his loyalty.",
+    poster: "/images/ben-poster.png",
+  },
+  {
+    name: "Cynthia",
+    blurb: "The spark of rebellion, lightning in both word and deed.",
+    poster: "/images/cynthia-poster.png",
+  },
+];
 
 const cards = [
   {
@@ -84,8 +105,58 @@ export default function Home() {
       </section>
 
       {/* CHARACTERS SPOTLIGHT */}
-      <section>
-        <h1>Meet Out Heroes</h1>
+      <section className="py-10 px-4">
+        <h1 className="text-2xl md:text-4xl text-center font-bold">
+          Faces Of The Rebellion
+        </h1>
+
+        <div className="mt-10 mb-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {spotlightCharacters.map((char, idx) => (
+            <div
+              key={idx}
+              className="w-72 h-96 mx-auto" // wrapper defines size
+            >
+              <ReactFlipCard
+                flipTrigger="onClick"
+                containerStyle={{
+                  width: "100%",
+                  height: "100%",
+                }}
+                frontStyle={{
+                  borderRadius: "1rem",
+                  padding: "1.5rem",
+                  background: "#121212",
+                  color: "white",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  width: "100%",
+                  height: "100%", // force fill
+                }}
+                backStyle={{
+                  borderRadius: "1rem",
+                  overflow: "hidden",
+                  width: "100%",
+                  height: "100%", // force fill
+                }}
+                frontComponent={
+                  <div className="text-center">
+                    <h2 className="text-xl font-bold mb-2">{char.name}</h2>
+                    <p className="text-sm opacity-80">{char.blurb}</p>
+                  </div>
+                }
+                backComponent={
+                  <img
+                    src={char.poster}
+                    alt={`${char.name} Poster`}
+                    className="w-full h-full object-cover rounded-xl"
+                  />
+                }
+              />
+            </div>
+          ))}
+        </div>
       </section>
     </>
   );
