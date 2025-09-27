@@ -27,19 +27,19 @@ const spotlightCharacters = [
 const cards = [
   {
     title: "Uppers",
-    src: "https://images.unsplash.com/photo-1518710843675-2540dd79065c?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "/images/uppers-logo.png",
     description:
       "The heights gleam bright, but shadows deepen at the base of every tower.",
   },
   {
     title: "Lowers",
-    src: "https://images.unsplash.com/photo-1600271772470-bd22a42787b3?q=80&w=3072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "/images/lowers-logo.png",
     description:
       "They carry the weight of a world not built for them, yet their hands keep it standing.",
   },
   {
     title: "Rejects",
-    src: "https://images.unsplash.com/photo-1505142468610-359e7d316be0?q=80&w=3070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "/images/rejects-logo.png",
     description:
       "Cast out, unseen, unwanted — but in the cracks, a fire waits to rise.",
   },
@@ -114,7 +114,7 @@ export default function Home() {
           {spotlightCharacters.map((char, idx) => (
             <div
               key={idx}
-              className="w-72 h-96 mx-auto" // wrapper defines size
+              className="w-72 h-96 mx-auto hover:cursor-pointer" // wrapper defines size
             >
               <ReactFlipCard
                 flipTrigger="onClick"
