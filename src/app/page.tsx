@@ -109,8 +109,10 @@ export default function Home() {
         <h1 className="text-2xl md:text-4xl text-center font-bold">
           Faces Of The Rebellion
         </h1>
-
-        <div className="mt-10 mb-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <p className="text-sm md:text-base text-center font-medium text-pretty mt-3.5">
+          Meet the souls defying the order.
+        </p>
+        <div className="mt-10 mb-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {spotlightCharacters.map((char, idx) => (
             <div
               key={idx}
@@ -156,6 +158,11 @@ export default function Home() {
               />
             </div>
           ))}
+        </div>
+        <div className="flex justify-center items-center text-center">
+          <Link href="/characters" className="w-full max-w-sm">
+            <Button style={{ padding: "20px" }}>Meet The Characters</Button>
+          </Link>
         </div>
       </section>
     </>
