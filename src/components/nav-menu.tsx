@@ -14,15 +14,6 @@ const Navigation = () => {
           <NavigationMenuItem>
             <NavigationMenuLink
               className="flex text-[16px] hover:bg-[#f3f4f6]"
-              href="/"
-            >
-              Home
-            </NavigationMenuLink>
-          </NavigationMenuItem>
-
-          <NavigationMenuItem>
-            <NavigationMenuLink
-              className="flex text-[16px] hover:bg-[#f3f4f6]"
               href="/characters"
             >
               Characters
