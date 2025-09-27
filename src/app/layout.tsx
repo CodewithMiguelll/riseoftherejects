@@ -4,6 +4,10 @@ import Header from "@/components/header";
 
 
 export const metadata: Metadata = {
+  icons: {
+    icon: "/assets/favicon.ico",
+    apple: "/assets/apple-touch-icon.png",
+  },
   title: "Rise Of The Rejects | Official site of the ROTR fanbase",
   description: "Join the rebellion against the mainstream!",
 };
