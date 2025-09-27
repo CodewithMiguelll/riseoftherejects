@@ -112,7 +112,7 @@ export default function Home() {
         <p className="text-sm md:text-base text-center font-medium text-pretty mt-3.5">
           Meet the souls defying the order.
         </p>
-        <div className="mt-10 mb-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="mt-10 mb-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
           {spotlightCharacters.map((char, idx) => (
             <div
               key={idx}
@@ -149,9 +149,11 @@ export default function Home() {
                   </div>
                 }
                 backComponent={
-                  <img
+                  <Image
                     src={char.poster}
                     alt={`${char.name} Poster`}
+                    width={288}
+                    height={384}
                     className="w-full h-full object-cover rounded-xl"
                   />
                 }
@@ -161,7 +163,76 @@ export default function Home() {
         </div>
         <div className="flex justify-center items-center text-center">
           <Link href="/characters" className="w-full max-w-sm">
-            <Button style={{ padding: "20px" }}>Meet The Characters</Button>
+            <button className="w-full bg-[#121212] text-white font-bold py-3 rounded transition-all duration-100 ease-in-out hover:bg-[#f3f4f6] hover:text-[#121212]">
+              Meet The Characters
+            </button>
+          </Link>
+        </div>
+      </section>
+
+      {/* TIMELINE SECTION */}
+      <section className="py-16 px-6">
+        <h2 className="text-2xl md:text-4xl font-bold text-center mb-8">
+          A History Written in Ashes
+        </h2>
+        <div className="max-w-3xl mx-auto">
+          <ol className="relative border-l border-gray-300">
+            {/* Event 1 */}
+            <li className="mb-10 ml-6">
+              <div className="absolute w-3 h-3 bg-[#121212] rounded-full -left-1.5 border border-white"></div>
+              <time className="mb-1 text-sm font-normal leading-none text-gray-500">
+                October 2nd, 2045
+              </time>
+              <h3 className="text-lg font-semibold text-gray-900">
+                SERUM I-960 is launched, first Nigerians with superpowers
+                emerge.
+              </h3>
+              <p className="text-base font-normal text-gray-600">
+                The first Nigerians awaken extraordinary abilities. For a
+                fleeting moment, hope blooms — before power is claimed by those
+                who would cage it.
+              </p>
+            </li>
+
+            {/* Event 2 */}
+            <li className="mb-10 ml-6">
+              <div className="absolute w-3 h-3 bg-[#121212] rounded-full -left-1.5 border border-white"></div>
+              <time className="mb-1 text-sm font-normal leading-none text-gray-500">
+                May 7th, 2065
+              </time>
+              <h3 className="text-lg font-semibold text-gray-900">
+                The Great War
+              </h3>
+              <p className="text-base font-normal text-gray-600">
+                A nation splinters under the weight of fear and ambition. Cities
+                burn, alliances fracture, and the dream of equality is buried
+                beneath rubble.
+              </p>
+            </li>
+
+            {/* Event 3 */}
+            <li className="mb-10 ml-6">
+              <div className="absolute w-3 h-3 bg-[#121212] rounded-full -left-1.5 border border-white"></div>
+              <time className="mb-1 text-sm font-normal leading-none text-gray-500">
+                Recently
+              </time>
+              <h3 className="text-lg font-semibold text-gray-900">
+                The Republic Of Order
+              </h3>
+              <p className="text-base font-normal text-gray-600">
+                The Uppers tighten their grip — Nullisyn protocols, border
+                dampeners, surveillance everywhere. Yet in the shadows, the
+                whispers of rebellion refuse to die.
+              </p>
+            </li>
+          </ol>
+        </div>
+        <div className="text-center mt-8">
+          <Link
+            href="/timeline"
+            className="inline-block bg-[#121212] text-white font-bold py-3 px-6 rounded transition-all duration-150 ease-in-out hover:bg-[#f3f4f6] hover:text-[#121212]"
+          >
+            Explore the Full Timeline
           </Link>
         </div>
       </section>
