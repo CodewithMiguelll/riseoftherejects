@@ -2,15 +2,9 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Pacifico, Rubik_Glitch } from "next/font/google";
+import { Rubik_Glitch } from "next/font/google";
 import { Menu, X } from "lucide-react";
 import Navigation from "@/components/nav-menu";
-
-const pacifico = Pacifico({
-  variable: "--font-pacifico",
-  subsets: ["latin"],
-  weight: "400",
-});
 
 const rubik_glitch = Rubik_Glitch({
   variable: "--font-rubik-glitch",
