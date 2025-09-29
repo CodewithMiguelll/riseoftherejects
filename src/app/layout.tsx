@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     apple: "/assets/apple-touch-icon.png",
   },
   title: "Rise Of The Rejects | Official site of the ROTR fanbase",
-  description: "Join the rebellion against the mainstream!",
+  description: "Join the rebellion against the Uppers!",
 };
 
 export default function RootLayout({
