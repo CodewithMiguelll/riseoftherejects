@@ -1,5 +1,4 @@
-"use client"
-//import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
+"use client";
 import Link from "next/link";
 import { FocusCards } from "@/components/ui/focus-cards";
 import { Button } from "@/components/ui/button";
