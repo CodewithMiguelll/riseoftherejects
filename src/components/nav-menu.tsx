@@ -13,7 +13,7 @@ const Navigation = () => {
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuLink
-              className="flex text-[16px] hover:bg-[#f3f4f6]"
+              className="flex text-[16px] hover:bg-[#f3f4f6] cursor-none"
               href="/characters"
             >
               Characters
@@ -21,7 +21,7 @@ const Navigation = () => {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuLink
-              className="flex text-[16px] hover:bg-[#f3f4f6]"
+              className="flex text-[16px] hover:bg-[#f3f4f6] cursor-none"
               href="/factions"
             >
               Factions
@@ -29,7 +29,7 @@ const Navigation = () => {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuLink
-              className="flex text-[16px] hover:bg-[#f3f4f6]"
+              className="flex text-[16px] hover:bg-[#f3f4f6] cursor-none"
               href="/about"
             >
               About
@@ -38,7 +38,7 @@ const Navigation = () => {
 
           <NavigationMenuItem>
             <NavigationMenuLink
-              className="flex text-[16px] hover:bg-[#f3f4f6]"
+              className="flex text-[16px] hover:bg-[#f3f4f6] cursor-none"
               href="/timeline"
             >
               Timeline
