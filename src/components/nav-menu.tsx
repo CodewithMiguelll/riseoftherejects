@@ -7,13 +7,13 @@ import {
 
 const Navigation = () => {
   return (
-    <div className="flex justify-center my-6 text-[#121212] font-medium gap-8">
+    <div className="flex justify-center my-6 text-[#e5e7e8] font-medium gap-8">
       {/* //TODO: CHANGE TEXT COLORS WHEN YOU SET UP THE ANIMATED GRADIENT BACKGROUND */}
       <NavigationMenu className="mx-4 flex">
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuLink
-              className="flex text-[16px] hover:bg-[#f3f4f6] cursor-none"
+              className="flex text-[16px] hover:bg-[#9233eac9] hover:text-[#e5e7e8] cursor-none"
               href="/characters"
             >
               Characters
@@ -21,7 +21,7 @@ const Navigation = () => {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuLink
-              className="flex text-[16px] hover:bg-[#f3f4f6] cursor-none"
+              className="flex text-[16px] hover:bg-[#9233eac9] hover:text-[#e5e7e8] cursor-none"
               href="/factions"
             >
               Factions
@@ -29,7 +29,7 @@ const Navigation = () => {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuLink
-              className="flex text-[16px] hover:bg-[#f3f4f6] cursor-none"
+              className="flex text-[16px] hover:bg-[#9233eac9] hover:text-[#e5e7e8] cursor-none"
               href="/about"
             >
               About
@@ -38,7 +38,7 @@ const Navigation = () => {
 
           <NavigationMenuItem>
             <NavigationMenuLink
-              className="flex text-[16px] hover:bg-[#f3f4f6] cursor-none"
+              className="flex text-[16px] hover:bg-[#9233eac9] hover:text-[#e5e7e8] cursor-none"
               href="/timeline"
             >
               Timeline
