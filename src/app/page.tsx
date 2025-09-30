@@ -4,6 +4,7 @@ import { FocusCards } from "@/components/ui/focus-cards";
 import { Button } from "@/components/ui/button";
 import ReactFlipCard from "reactjs-flip-card";
 import Image from "next/image";
+import { cursorTo } from "readline";
 
 const spotlightCharacters = [
   {
@@ -59,10 +60,15 @@ export default function Home() {
           </p>
           <div className="flex flex-row items-center justify-center gap-3.5 mt-5">
             <Link href="/characters">
-              <Button style={{ padding: "20px" }}>Meet The Characters</Button>
+              <Button className="hover:bg-[#9233eac9] p-[25px] bg-[#9333ea] hover:text-[#e5e7e8]">
+                Meet The Characters
+              </Button>
             </Link>
             <Link href="/factions">
-              <Button variant={"outline"} style={{ padding: "20px" }}>
+              <Button
+                className="p-[25px] bg-[#3b83f6] hover:bg-[#3b83f6cc] hover:text-[#e5e7e8]"
+                variant={"ghost"}
+              >
                 Pick A Side
               </Button>
             </Link>
@@ -83,7 +89,7 @@ export default function Home() {
         </div>
         <div className="flex justify-center">
           <Link href="/factions" className="w-full max-w-sm">
-            <button className="w-full bg-[#121212] text-white font-bold py-3 rounded transition-all duration-100 ease-in-out hover:bg-[#f3f4f6] hover:text-[#121212]">
+            <button className="w-full bg-[#9333ea] text-[#e5e7e8] font-bold py-3 rounded transition-all duration-100 ease-in-out hover:bg-[#9233eac9] ">
               Pick A Side
             </button>
           </Link>
@@ -97,7 +103,7 @@ export default function Home() {
             “We can't just sit and take it like good little boys, if not now,
             then when?”
           </p>
-          <footer className="mt-4 text-sm text-[#121212] font-medium">
+          <footer className="mt-4 text-sm text-[#e5e7e8] font-medium">
             — Omajiri Spokesperson
           </footer>
         </blockquote>
@@ -115,7 +121,7 @@ export default function Home() {
           {spotlightCharacters.map((char, idx) => (
             <div
               key={idx}
-              className="w-72 h-96 mx-auto hover:cursor-pointer" // wrapper defines size
+              className="w-72 h-96 mx-auto hover:cursor-none mb-2" // wrapper defines size
             >
               <ReactFlipCard
                 flipTrigger="onClick"
@@ -126,7 +132,7 @@ export default function Home() {
                 frontStyle={{
                   borderRadius: "1rem",
                   padding: "1.5rem",
-                  background: "#121212",
+                  background: "#3B82F68f",
                   color: "white",
                   display: "flex",
                   flexDirection: "column",
@@ -162,7 +168,7 @@ export default function Home() {
         </div>
         <div className="flex justify-center items-center text-center">
           <Link href="/characters" className="w-full max-w-sm">
-            <button className="w-full bg-[#121212] text-white font-bold py-3 rounded transition-all duration-100 ease-in-out hover:bg-[#f3f4f6] hover:text-[#121212]">
+            <button className="w-full bg-[#9233ea] text-white font-bold py-3 rounded transition-all duration-100 ease-in-out hover:bg-[#9233eac9] cursor-none">
               Meet The Characters
             </button>
           </Link>
@@ -175,18 +181,18 @@ export default function Home() {
           A History Written in Ashes
         </h2>
         <div className="max-w-3xl mx-auto">
-          <ol className="relative border-l border-gray-300">
+          <ol className="relative border-l border-[#FACC15]">
             {/* Event 1 */}
             <li className="mb-10 ml-6">
               <div className="absolute w-3 h-3 bg-[#121212] rounded-full -left-1.5 border border-white"></div>
-              <time className="mb-1 text-sm font-normal leading-none text-gray-500">
+              <time className="mb-1 text-sm font-normal leading-none text-[#e5e7e8]">
                 October 2nd, 2045
               </time>
-              <h3 className="text-lg font-semibold text-gray-900">
+              <h3 className="text-lg font-semibold text-[#e5e7e8]">
                 SERUM I-960 is launched, first Nigerians with superpowers
                 emerge.
               </h3>
-              <p className="text-base font-normal text-gray-600">
+              <p className="text-base font-normal text-[#e5e7e8]">
                 The first Nigerians awaken extraordinary abilities. For a
                 fleeting moment, hope blooms — before power is claimed by those
                 who would cage it.
@@ -195,14 +201,14 @@ export default function Home() {
 
             {/* Event 2 */}
             <li className="mb-10 ml-6">
-              <div className="absolute w-3 h-3 bg-[#121212] rounded-full -left-1.5 border border-white"></div>
-              <time className="mb-1 text-sm font-normal leading-none text-gray-500">
+              <div className="absolute w-3 h-3 rounded-full -left-1.5 border border-white"></div>
+              <time className="mb-1 text-sm font-normal leading-none text-[#e5e7e8]">
                 May 7th, 2065
               </time>
-              <h3 className="text-lg font-semibold text-gray-900">
+              <h3 className="text-lg font-semibold text-[#e5e7e8]">
                 The Great War
               </h3>
-              <p className="text-base font-normal text-gray-600">
+              <p className="text-base font-normal text-[#e5e7e8]">
                 A nation splinters under the weight of fear and ambition. Cities
                 burn, alliances fracture, and the dream of equality is buried
                 beneath rubble.
@@ -212,13 +218,13 @@ export default function Home() {
             {/* Event 3 */}
             <li className="mb-10 ml-6">
               <div className="absolute w-3 h-3 bg-[#121212] rounded-full -left-1.5 border border-white"></div>
-              <time className="mb-1 text-sm font-normal leading-none text-gray-500">
+              <time className="mb-1 text-sm font-normal leading-none text-[#e5e7e8]">
                 Recently
               </time>
-              <h3 className="text-lg font-semibold text-gray-900">
+              <h3 className="text-lg font-semibold text-[#e5e7e8]">
                 The Republic Of Order
               </h3>
-              <p className="text-base font-normal text-gray-600">
+              <p className="text-base font-normal text-[#e5e7e8]">
                 The Uppers tighten their grip — Nullisyn protocols, border
                 dampeners, surveillance everywhere. Yet in the shadows, the
                 whispers of rebellion refuse to die.
@@ -229,7 +235,7 @@ export default function Home() {
         <div className="text-center mt-8">
           <Link
             href="/timeline"
-            className="inline-block bg-[#121212] text-white font-bold py-3 px-6 rounded transition-all duration-150 ease-in-out hover:bg-[#f3f4f6] hover:text-[#121212]"
+            className="inline-block bg-[#9233ea] cursor-none text-[#e5e7e8] font-bold py-3 px-6 rounded transition-all duration-150 ease-in-out hover:bg-[#9233eac9]"
           >
             Explore the Full Timeline
           </Link>
