@@ -3,6 +3,8 @@
 
 body{
   cursor: none;
+  background-color: #0A0A0A;
+  color: #E5E7EB;
 }
 
 @custom-variant dark (&:is(.dark *));
