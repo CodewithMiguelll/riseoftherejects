@@ -13,9 +13,8 @@ export const ParallaxScroll = ({
   className?: string;
 }) => {
   const gridRef = useRef<any>(null);
-  const { scrollYProgress } = useScroll({
-    container: gridRef, // remove this if your container is not fixed height
-    offset: ["start start", "end start"], // remove this if your container is not fixed height
+  const { scrollYProgress } = useScroll({ 
+  // remove this if your container is not fixed height
   });
 
   const translateFirst = useTransform(scrollYProgress, [0, 1], [0, -200]);
