@@ -1,10 +1,21 @@
 "use client";
 import Link from "next/link";
+import { Orbitron, Oswald } from "next/font/google";
 import { FocusCards } from "@/components/ui/focus-cards";
 import { Button } from "@/components/ui/button";
 import ReactFlipCard from "reactjs-flip-card";
+import { ParallaxScroll } from "@/components/ui/parallax-scroll";
 import Image from "next/image";
-import { cursorTo } from "readline";
+
+const orbitron = Orbitron({
+  subsets: ["latin"],
+  weight: ["400", "500", "700", "900"],
+});
+
+const oswald = Oswald({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 const spotlightCharacters = [
   {
@@ -22,6 +33,35 @@ const spotlightCharacters = [
     blurb: "The spark of rebellion, lightning in both word and deed.",
     poster: "/images/cynthia-poster.png",
   },
+];
+
+const images = [
+  "/images/djebi-abraham-philippe-e514SZzfpfM-unsplash.jpg",
+  "/images/peter-burdon-HwFJlomisJ4-unsplash.jpg",
+  "/images/mohamed-jamil-latrach-PEJQ3DOfBUg-unsplash.jpg",
+  "/images/mina-rad-wmz8nNRNnJo-unsplash.jpg",
+  "/images/kunal-kalra-1XVNuvBgVl0-unsplash.jpg",
+  "/images/emmanuel-ben-paul-H40J2AESe-Q-unsplash.jpg",
+  "/images/abdul-rauf-ES1e9eo38eo-unsplash.jpg",
+  "/images/barry-talley-nP9dYKPlSl0-unsplash.jpg",
+  "/images/tajmia-loiacono-od_kokVQ-O4-unsplash.jpg",
+  "/images/hassan-kibwana-M8uKuPGETMg-unsplash.jpg",
+  "/images/bryan-garcia-GVbnzwc9fVA-unsplash.jpg",
+  "/images/the-new-york-public-library-pwoTQl2xuM8-unsplash.jpg",
+  "/images/nupo-deyon-daniel-9ySEZ-ugtJA-unsplash.jpg",
+  "/images/djebi-abraham-philippe-e514SZzfpfM-unsplash.jpg",
+  "/images/peter-burdon-HwFJlomisJ4-unsplash.jpg",
+  "/images/mohamed-jamil-latrach-PEJQ3DOfBUg-unsplash.jpg",
+  "/images/mina-rad-wmz8nNRNnJo-unsplash.jpg",
+  "/images/kunal-kalra-1XVNuvBgVl0-unsplash.jpg",
+  "/images/emmanuel-ben-paul-H40J2AESe-Q-unsplash.jpg",
+  "/images/abdul-rauf-ES1e9eo38eo-unsplash.jpg",
+  "/images/barry-talley-nP9dYKPlSl0-unsplash.jpg",
+  "/images/tajmia-loiacono-od_kokVQ-O4-unsplash.jpg",
+  "/images/hassan-kibwana-M8uKuPGETMg-unsplash.jpg",
+  "/images/bryan-garcia-GVbnzwc9fVA-unsplash.jpg",
+  "/images/the-new-york-public-library-pwoTQl2xuM8-unsplash.jpg",
+  "/images/nupo-deyon-daniel-9ySEZ-ugtJA-unsplash.jpg",
 ];
 
 const cards = [
@@ -51,7 +91,9 @@ export default function Home() {
       {/* HERO SECTION */}
       <section className="py-24 md:py-36 px-5 text-center">
         <div className="flex flex-col items-center justify-center">
-          <h1 className="text-2xl md:text-7xl font-bold">
+          <h1
+            className={`${orbitron.className} text-2xl md:text-7xl font-bold`}
+          >
             In a nation divided, rebellion ignites.
           </h1>
           <p className="text-lg md:text-xl mt-2.5 font-medium text-pretty">
@@ -60,13 +102,13 @@ export default function Home() {
           </p>
           <div className="flex flex-row items-center justify-center gap-3.5 mt-5">
             <Link href="/characters">
-              <Button className="hover:bg-[#9233eac9] p-[25px] bg-[#9333ea] hover:text-[#e5e7e8]">
+              <Button className="hover:bg-[#9233eac9] p-[25px] bg-[#9333ea] hover:text-[#e5e7e8] cursor-none">
                 Meet The Characters
               </Button>
             </Link>
             <Link href="/factions">
               <Button
-                className="p-[25px] bg-[#3b83f6] hover:bg-[#3b83f6cc] hover:text-[#e5e7e8]"
+                className="p-[25px] bg-[#3b83f6] hover:bg-[#3b83f6cc] hover:text-[#e5e7e8] cursor-none"
                 variant={"ghost"}
               >
                 Pick A Side
@@ -89,7 +131,7 @@ export default function Home() {
         </div>
         <div className="flex justify-center">
           <Link href="/factions" className="w-full max-w-sm">
-            <button className="w-full bg-[#9333ea] text-[#e5e7e8] font-bold py-3 rounded transition-all duration-100 ease-in-out hover:bg-[#9233eac9] ">
+            <button className="w-full bg-[#9333ea] text-[#e5e7e8] font-bold py-3 rounded transition-all duration-100 ease-in-out hover:bg-[#9233eac9] cursor-none">
               Pick A Side
             </button>
           </Link>
@@ -240,6 +282,27 @@ export default function Home() {
             Explore the Full Timeline
           </Link>
         </div>
+      </section>
+
+      {/* PARALLAX SECTION */}
+      <section className="py-24 md:py-36 px-5 text-[#e5e7e8]">
+        <h1 className="text-2xl md:text-4xl font-bold text-center mb-8">
+          Step Into The Republic
+        </h1>
+        <p className="text-lg md:text-xl mt-2.5 font-medium text-pretty text-center">
+          The Uppers built walls and checkpoints, but every barrier tells a
+          story. This is the Republic they claim. Will you accept it?
+        </p>
+        <div className="mt-5">
+          <ParallaxScroll images={images} />
+        </div>
+      </section>
+
+      {/* FOOTER CTA */}
+      <section className="py-10 px-4 text-center">
+        <h2 className="text-2xl md:text-4xl font-bold mb-4 text-white">
+          Join the Rebellion
+        </h2>
       </section>
     </>
   );
