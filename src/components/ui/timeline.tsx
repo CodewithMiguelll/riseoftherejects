@@ -1,11 +1,23 @@
 "use client";
 import {
-  useMotionValueEvent,
   useScroll,
   useTransform,
   motion,
 } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
+import { Orbitron, Barlow_Condensed } from "next/font/google";
+
+const orbitron = Orbitron({
+  subsets: ["latin"],
+  weight: ["400", "500", "700", "900"],
+});
+
+// Subheading Font
+const barlow = Barlow_Condensed({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
 
 interface TimelineEntry {
   title: string;
@@ -33,15 +45,16 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
-    <div
-      className="w-full font-sans md:px-10"
-      ref={containerRef}
-    >
+    <div className="w-full font-sans md:px-10" ref={containerRef}>
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-        <h2 className="text-2xl md:text-6xl mb-4 text-[#e5e7e8] max-w-4xl">
+        <h2
+          className={`${orbitron.className} text-2xl md:text-6xl mb-4 text-[#e5e7e8] max-w-4xl`}
+        >
           Chronicles Of A Fractured Nation
         </h2>
-        <p className="text-[#e5e7e8] text-sm md:text-base max-w-sm">
+        <p
+          className={`${barlow.className} text-[#e5e7e8] text-sm md:text-base max-w-sm font-medium`}
+        >
           Key moments that shaped the rise of factions, the fall of freedom, and
           the whispers of resistance.
         </p>
