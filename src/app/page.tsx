@@ -1,18 +1,29 @@
 "use client";
 import Link from "next/link";
-import { Orbitron, Oswald } from "next/font/google";
+import { Orbitron, Barlow_Condensed, Source_Sans_3 } from "next/font/google";
 import { FocusCards } from "@/components/ui/focus-cards";
 import { Button } from "@/components/ui/button";
 import ReactFlipCard from "reactjs-flip-card";
 import { ParallaxScroll } from "@/components/ui/parallax-scroll";
 import Image from "next/image";
 
+// Font configurations
+
+// Heading Font
 const orbitron = Orbitron({
   subsets: ["latin"],
   weight: ["400", "500", "700", "900"],
 });
 
-const oswald = Oswald({
+
+// Subheading Font
+const barlow = Barlow_Condensed({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+// Body Font
+const sourceSans = Source_Sans_3({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
@@ -96,7 +107,9 @@ export default function Home() {
           >
             In a nation divided, rebellion ignites.
           </h1>
-          <p className="text-lg md:text-xl mt-2.5 font-medium text-pretty">
+          <p
+            className={`${sourceSans.className} text-lg md:text-xl mt-2.5 font-medium text-pretty`}
+          >
             The Uppers rule, The Lowers endure... but the Rejects refuse to
             kneel.
           </p>
@@ -120,10 +133,14 @@ export default function Home() {
 
       {/* FACTIONS SECTION */}
       <section className=" md:py-10 px-4">
-        <h1 className="text-2xl md:text-4xl text-center font-bold">
+        <h1
+          className={`${barlow.className} text-2xl md:text-4xl text-center font-bold`}
+        >
           The Republic is divided... which side are you on?
         </h1>
-        <p className="text-sm md:text-base text-center font-medium text-pretty mt-3.5">
+        <p
+          className={`${sourceSans.className} text-sm md:text-base text-center font-medium text-pretty mt-3.5`}
+        >
           Choose wisely. Your fate depends on it.
         </p>
         <div className="mt-10 mb-12">
@@ -153,7 +170,9 @@ export default function Home() {
 
       {/* CHARACTERS SPOTLIGHT */}
       <section className="py-10 px-4">
-        <h1 className="text-2xl md:text-4xl text-center font-bold">
+        <h1
+          className={`${barlow.className} text-2xl md:text-4xl text-center font-bold`}
+        >
           Faces Of The Rebellion
         </h1>
         <p className="text-sm md:text-base text-center font-medium text-pretty mt-3.5">
@@ -219,7 +238,9 @@ export default function Home() {
 
       {/* TIMELINE SECTION */}
       <section className="py-16 px-6">
-        <h2 className="text-2xl md:text-4xl font-bold text-center mb-8">
+        <h2
+          className={`${barlow.className} text-2xl md:text-4xl text-center font-bold`}
+        >
           A History Written in Ashes
         </h2>
         <div className="max-w-3xl mx-auto">
@@ -286,10 +307,14 @@ export default function Home() {
 
       {/* PARALLAX SECTION */}
       <section className="py-24 md:py-36 px-5 text-[#e5e7e8]">
-        <h1 className="text-2xl md:text-4xl font-bold text-center mb-8">
+        <h1
+          className={`${barlow.className} text-2xl md:text-4xl text-center font-bold`}
+        >
           Step Into The Republic
         </h1>
-        <p className="text-lg md:text-xl mt-2.5 font-medium text-pretty text-center">
+        <p
+          className={`${sourceSans.className} text-lg md:text-xl mt-2.5 font-medium text-pretty text-center`}
+        >
           The Uppers built walls and checkpoints, but every barrier tells a
           story. This is the Republic they claim. Will you accept it?
         </p>
