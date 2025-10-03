@@ -4,6 +4,12 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
+import { Source_Sans_3 } from "next/font/google";
+
+const sourceSans = Source_Sans_3({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 const Navigation = () => {
   return (
@@ -13,7 +19,7 @@ const Navigation = () => {
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuLink
-              className="flex text-[16px] hover:bg-[#9233eac9] hover:text-[#e5e7e8] cursor-none"
+              className={`flex text-[16px] hover:bg-[#9233eac9] hover:text-[#e5e7e8] cursor-none ${sourceSans.className}`}
               href="/characters"
             >
               Characters
@@ -21,7 +27,7 @@ const Navigation = () => {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuLink
-              className="flex text-[16px] hover:bg-[#9233eac9] hover:text-[#e5e7e8] cursor-none"
+              className={`flex text-[16px] hover:bg-[#9233eac9] hover:text-[#e5e7e8] cursor-none ${sourceSans.className}`}
               href="/factions"
             >
               Factions
@@ -29,7 +35,7 @@ const Navigation = () => {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuLink
-              className="flex text-[16px] hover:bg-[#9233eac9] hover:text-[#e5e7e8] cursor-none"
+              className={`flex text-[16px] hover:bg-[#9233eac9] hover:text-[#e5e7e8] cursor-none ${sourceSans.className}`}
               href="/about"
             >
               About
@@ -38,7 +44,7 @@ const Navigation = () => {
 
           <NavigationMenuItem>
             <NavigationMenuLink
-              className="flex text-[16px] hover:bg-[#9233eac9] hover:text-[#e5e7e8] cursor-none"
+              className={`flex text-[16px] hover:bg-[#9233eac9] hover:text-[#e5e7e8] cursor-none ${sourceSans.className}`}
               href="/timeline"
             >
               Timeline
