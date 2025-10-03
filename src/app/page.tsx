@@ -115,17 +115,14 @@ export default function Home() {
           </p>
           <div className="flex flex-row items-center justify-center gap-3.5 mt-5">
             <Link href="/characters">
-              <Button className="hover:bg-[#9233eac9] p-[25px] bg-[#9333ea] hover:text-[#e5e7e8] cursor-none">
+              <button className="hover:bg-[#9233eac9] p-4 rounded-md bg-[#9333ea] hover:text-[#e5e7e8] cursor-none">
                 Meet The Characters
-              </Button>
+              </button>
             </Link>
             <Link href="/factions">
-              <Button
-                className="p-[25px] bg-[#3b83f6] hover:bg-[#3b83f6cc] hover:text-[#e5e7e8] cursor-none"
-                variant={"ghost"}
-              >
+              <button className="p-4 rounded-md bg-[#3b83f6] hover:bg-[#3b83f6cc] hover:text-[#e5e7e8] cursor-none">
                 Pick A Side
-              </Button>
+              </button>
             </Link>
           </div>
         </div>
@@ -324,10 +321,31 @@ export default function Home() {
       </section>
 
       {/* FOOTER CTA */}
-      <section className="py-10 px-4 text-center">
-        <h2 className="text-2xl md:text-4xl font-bold mb-4 text-white">
-          Join the Rebellion
+      <section className="py-10 px-4 text-center bg-[#9233ea] text-[#e5e7e8] rounded-lg mx-4 md:mx-20 mb-10">
+        <h2
+          className={`${barlow.className} text-2xl md:text-4xl font-bold mb-4 text-white`}
+        >
+          This Is Just The Beginning
         </h2>
+        <p
+          className={`${sourceSans.className} mb-8 text-xs font-normal text-[#e5e7e8] md:text-lg`}
+        >
+          The story of the Rejects is still being written. Step inside, and be
+          part of the legend.
+        </p>
+        <div className="flex justify-center items-center text-center gap-3.5">
+          <Link href="/characters">
+            <button className="bg-[#0a0a0a] cursor-none text-[#e5e7e8] font-bold py-3 px-6 rounded transition-all">
+              Meet The Characters
+            </button>
+          </Link>
+
+          <Link href="/timeline">
+            <button className="bg-[#3b83f6] hover:bg-[#3b83f6cc] cursor-none text-[#e5e7e8] font-bold py-3 px-6 rounded transition-all">
+              Explore The Lore
+            </button>
+          </Link>
+        </div>
       </section>
     </>
   );
