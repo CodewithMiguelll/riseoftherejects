@@ -103,11 +103,15 @@ export default function Home() {
       <section className="py-24 md:py-36 px-5 text-center">
         <div className="flex flex-col items-center justify-center">
           <h1
+            data-aos="fade-up"
+            data-aos-duration="1000"
             className={`${orbitron.className} text-2xl md:text-7xl font-bold`}
           >
             In a nation divided, rebellion ignites.
           </h1>
           <p
+            data-aos="fade-up"
+            data-aos-duration="1300"
             className={`${sourceSans.className} text-lg md:text-xl mt-2.5 font-medium text-pretty`}
           >
             The Uppers rule, The Lowers endure... but the Rejects refuse to
@@ -115,12 +119,20 @@ export default function Home() {
           </p>
           <div className="flex flex-row items-center justify-center gap-3.5 mt-5">
             <Link href="/characters">
-              <button className="hover:bg-[#9233eac9] p-4 rounded-md bg-[#9333ea] hover:text-[#e5e7e8] cursor-none">
+              <button
+                data-aos="fade-up"
+                data-aos-duration="1400"
+                className="hover:bg-[#9233eac9] p-4 rounded-md bg-[#9333ea] hover:text-[#e5e7e8] cursor-none"
+              >
                 Meet The Characters
               </button>
             </Link>
             <Link href="/factions">
-              <button className="p-4 rounded-md bg-[#3b83f6] hover:bg-[#3b83f6cc] hover:text-[#e5e7e8] cursor-none">
+              <button
+                data-aos="fade-up"
+                data-aos-duration="1500"
+                className="p-4 rounded-md bg-[#3b83f6] hover:bg-[#3b83f6cc] hover:text-[#e5e7e8] cursor-none"
+              >
                 Pick A Side
               </button>
             </Link>
@@ -178,6 +190,8 @@ export default function Home() {
         <div className="mt-10 mb-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
           {spotlightCharacters.map((char, idx) => (
             <div
+              data-aos="zoom-out"
+              data-aos-duration="1000"
               key={idx}
               className="w-72 h-96 mx-auto hover:cursor-none mb-2" // wrapper defines size
             >
