@@ -2,7 +2,6 @@
 import Link from "next/link";
 import { Orbitron, Barlow_Condensed, Source_Sans_3 } from "next/font/google";
 import { FocusCards } from "@/components/ui/focus-cards";
-import { Button } from "@/components/ui/button";
 import ReactFlipCard from "reactjs-flip-card";
 import { ParallaxScroll } from "@/components/ui/parallax-scroll";
 import Image from "next/image";
