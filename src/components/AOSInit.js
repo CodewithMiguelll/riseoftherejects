@@ -4,6 +4,19 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+{/*
+    This component initializes AOS (Animate On Scroll) library.
+    It should be included once in the application, typically at a high level (e.g., in the main layout or App component).
+    The useEffect hook ensures that AOS is initialized only once when the component mounts.
+
+    To set it up, install the aos package with your package installer
+    Copy the init code from the GitHub repo and paste in your init.js file (like this one)
+    Import it in your app's layout file or main component file
+    Add the component <AOSInit /> to your layout or main component file
+    Now you can use AOS attributes in your components to animate elements on scroll
+    C'est finit!
+     */}
+
 const AOSInit = () => {
     console.log("AOS Initialized");
   useEffect(() => {
