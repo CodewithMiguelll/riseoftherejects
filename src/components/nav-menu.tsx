@@ -13,13 +13,12 @@ const sourceSans = Source_Sans_3({
 
 const Navigation = () => {
   return (
-    <div className="flex justify-center my-6 text-[#e5e7e8] font-medium gap-8">
-      {/* //TODO: CHANGE TEXT COLORS WHEN YOU SET UP THE ANIMATED GRADIENT BACKGROUND */}
+    <div className="flex justify-center my-6 text-[#060506] font-medium gap-8">
       <NavigationMenu className="mx-4 flex">
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuLink
-              className={`flex text-[16px] hover:bg-[#9233eac9] hover:text-[#e5e7e8] cursor-none ${sourceSans.className}`}
+              className={`flex text-[16px] hover:bg-[#c4b6c1] text-[#efebee] hover:text-[#060506] cursor-none ${sourceSans.className}`}
               href="/characters"
             >
               Characters
@@ -27,7 +26,7 @@ const Navigation = () => {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuLink
-              className={`flex text-[16px] hover:bg-[#9233eac9] hover:text-[#e5e7e8] cursor-none ${sourceSans.className}`}
+              className={`flex text-[16px] hover:bg-[#c4b6c1] text-[#efebee] hover:text-[#060506] cursor-none ${sourceSans.className}`}
               href="/factions"
             >
               Factions
@@ -35,7 +34,7 @@ const Navigation = () => {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuLink
-              className={`flex text-[16px] hover:bg-[#9233eac9] hover:text-[#e5e7e8] cursor-none ${sourceSans.className}`}
+              className={`flex text-[16px] hover:bg-[#c4b6c1] text-[#efebee] hover:text-[#060506] cursor-none ${sourceSans.className}`}
               href="/about"
             >
               About
@@ -44,7 +43,7 @@ const Navigation = () => {
 
           <NavigationMenuItem>
             <NavigationMenuLink
-              className={`flex text-[16px] hover:bg-[#9233eac9] hover:text-[#e5e7e8] cursor-none ${sourceSans.className}`}
+              className={`flex text-[16px] hover:bg-[#c4b6c1] text-[#efebee] hover:text-[#060506] cursor-none ${sourceSans.className}`}
               href="/timeline"
             >
               Timeline
