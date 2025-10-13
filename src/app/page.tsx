@@ -116,12 +116,12 @@ export default function Home() {
             The Uppers rule, The Lowers endure... but the Rejects refuse to
             kneel.
           </p>
-          <div className="flex flex-row items-center justify-center gap-3.5 mt-5">
+          <div className="flex flex-row items-center justify-center gap-4.5 mt-5">
             <Link href="/characters">
               <button
                 data-aos="fade-up"
                 data-aos-duration="1400"
-                className="hover:bg-[#9233eac9] p-4 rounded-md bg-[#9333ea] hover:text-[#e5e7e8] cursor-none"
+                className="transition-all bg-[#c4b6c1] hover:bg-[#c4b6c1cc] text-[#060506] p-4 rounded-md hover:-translate-y-1 cursor-none"
               >
                 Meet The Characters
               </button>
@@ -130,7 +130,7 @@ export default function Home() {
               <button
                 data-aos="fade-up"
                 data-aos-duration="1500"
-                className="p-4 rounded-md bg-[#3b83f6] hover:bg-[#3b83f6cc] hover:text-[#e5e7e8] cursor-none"
+                className="transition-all bg-[#5d4b51] hover:bg-[#5d4b51cc] p-4 rounded-md hover:-translate-y-1 cursor-none"
               >
                 Pick A Side
               </button>
@@ -142,7 +142,7 @@ export default function Home() {
       {/* FACTIONS SECTION */}
       <section className=" md:py-10 px-4">
         <h1
-          className={`${barlow.className} text-2xl md:text-4xl text-center font-bold`}
+          className={`${barlow.className} text-2xl md:text-5xl text-center font-bold`}
         >
           The Republic is divided... which side are you on?
         </h1>
@@ -156,7 +156,7 @@ export default function Home() {
         </div>
         <div className="flex justify-center">
           <Link href="/factions" className="w-full max-w-sm">
-            <button className="w-full bg-[#9333ea] text-[#e5e7e8] font-bold py-3 rounded transition-all duration-100 ease-in-out hover:bg-[#9233eac9] cursor-none">
+            <button className="w-full bg-[#c4b6c1] hover:bg-[#c4b6c1cc] text-[#060506] font-bold py-3 rounded transition-all duration-100 ease-in-out cursor-none">
               Pick A Side
             </button>
           </Link>
@@ -179,7 +179,7 @@ export default function Home() {
       {/* CHARACTERS SPOTLIGHT */}
       <section className="py-10 px-4">
         <h1
-          className={`${barlow.className} text-2xl md:text-4xl text-center font-bold`}
+          className={`${barlow.className} text-2xl md:text-5xl text-center font-bold`}
         >
           Faces Of The Rebellion
         </h1>
@@ -203,7 +203,7 @@ export default function Home() {
                 frontStyle={{
                   borderRadius: "1rem",
                   padding: "1.5rem",
-                  background: "#3B82F68f",
+                  background: "#998185",
                   color: "white",
                   display: "flex",
                   flexDirection: "column",
@@ -239,7 +239,7 @@ export default function Home() {
         </div>
         <div className="flex justify-center items-center text-center">
           <Link href="/characters" className="w-full max-w-sm">
-            <button className="w-full bg-[#9233ea] text-white font-bold py-3 rounded transition-all duration-100 ease-in-out hover:bg-[#9233eac9] cursor-none">
+            <button className="w-full bg-[#c4b6c1] hover:bg-[#c4b6c1cc] text-[#060506] font-bold py-3 rounded transition-all duration-100 ease-in-out cursor-none">
               Meet The Characters
             </button>
           </Link>
@@ -249,12 +249,12 @@ export default function Home() {
       {/* TIMELINE SECTION */}
       <section className="py-16 px-6">
         <h2
-          className={`${barlow.className} text-2xl md:text-4xl text-center font-bold`}
+          className={`${barlow.className} text-2xl md:text-5xl text-center font-bold`}
         >
           A History Written in Ashes
         </h2>
-        <div className="max-w-3xl mx-auto">
-          <ol className="relative border-l border-[#FACC15]">
+        <div className="max-w-3xl mx-auto mt-5">
+          <ol className="relative border-l border-[#998185]">
             {/* Event 1 */}
             <li className="mb-10 ml-6">
               <div className="absolute w-3 h-3 bg-[#121212] rounded-full -left-1.5 border border-white"></div>
@@ -308,7 +308,7 @@ export default function Home() {
         <div className="text-center mt-8">
           <Link
             href="/timeline"
-            className="inline-block bg-[#9233ea] cursor-none text-[#e5e7e8] font-bold py-3 px-6 rounded transition-all duration-150 ease-in-out hover:bg-[#9233eac9]"
+            className="inline-block cursor-none bg-[#c4b6c1] hover:bg-[#c4b6c1cc] text-[#060506] font-bold py-3 px-6 rounded transition-all duration-150 ease-in-out"
           >
             Explore the Full Timeline
           </Link>
@@ -318,7 +318,7 @@ export default function Home() {
       {/* PARALLAX SECTION */}
       <section className="py-24 md:py-36 px-5 text-[#e5e7e8]">
         <h1
-          className={`${barlow.className} text-2xl md:text-4xl text-center font-bold`}
+          className={`${barlow.className} text-2xl md:text-5xl text-center font-bold`}
         >
           Step Into The Republic
         </h1>
@@ -334,7 +334,7 @@ export default function Home() {
       </section>
 
       {/* FOOTER CTA */}
-      <section className="py-10 px-4 text-center bg-[#9233ea] text-[#e5e7e8] rounded-lg mx-4 md:mx-20 mb-10">
+      <section className="py-10 px-4 text-center bg-[#998185] text-[#e5e7e8] rounded-lg mx-4 md:mx-20 mb-10">
         <h2
           className={`${barlow.className} text-2xl md:text-4xl font-bold mb-4 text-white`}
         >
@@ -348,13 +348,13 @@ export default function Home() {
         </p>
         <div className="flex justify-center items-center text-center gap-3.5">
           <Link href="/characters">
-            <button className="bg-[#0a0a0a] cursor-none text-[#e5e7e8] font-bold py-3 px-6 rounded transition-all">
+            <button className="bg-[#c4b6c1] hover:bg-[#c4b6c1cc] text-[#060506] cursor-none font-bold py-3 px-6 rounded transition-all">
               Meet The Characters
             </button>
           </Link>
 
           <Link href="/timeline">
-            <button className="bg-[#3b83f6] hover:bg-[#3b83f6cc] cursor-none text-[#e5e7e8] font-bold py-3 px-6 rounded transition-all">
+            <button className="bg-[#5d4b51] hover:bg-[#5d4b51cc] cursor-none text-[#060506] font-bold py-3 px-6 rounded transition-all">
               Explore The Lore
             </button>
           </Link>
