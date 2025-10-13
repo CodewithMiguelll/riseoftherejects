@@ -52,7 +52,7 @@ Card.displayName = "Card";
 type CardType = {
   title: string;
   src: string;
-  description?: string; // 👈 added this
+  description?: string; // 👈 added this for Factions description
 };
 
 export function FocusCards({ cards }: { cards: CardType[] }) {
