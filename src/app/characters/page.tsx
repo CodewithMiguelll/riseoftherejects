@@ -28,7 +28,7 @@ const CharactersPage = () => {
       <p
         className={`${sourceSans.className} text-lg md:text-xl mt-2.5 font-medium text-pretty`}
       >
-        Meet the defiant Rejects, the resilient Lowers, and the authoritative
+        Meet the defiant Rejects, and the authoritative
         Uppers in a world divided by power and rebellion.
       </p>
     </>
