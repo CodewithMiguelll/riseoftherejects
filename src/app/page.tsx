@@ -353,9 +353,12 @@ export default function Home() {
             </button>
           </Link>
 
-          <Link href="/timeline">
-            <button className="bg-[#5d4b51] hover:bg-[#5d4b51cc] cursor-none text-[#060506] font-bold py-3 px-6 rounded transition-all">
-              Explore The Lore
+          <Link
+            href={"https://stage32.com/miguelwrites"}
+            target="_blank" rel="noopener noreferrer"
+          >
+            <button className="bg-[#5d4b51] hover:bg-[#5d4b51cc] cursor-none text-[#efebee] font-bold py-3 px-6 rounded transition-all">
+              Follow The Author
             </button>
           </Link>
         </div>
