@@ -54,6 +54,12 @@ const characters = {
       power: "Electricity",
       image: "/assets/characters/sly.jpg",
     },
+    {
+      name: "Okoro",
+      role: "Reject rebel",
+      power: "Undisclosed",
+      image: "/assets/characters/sly.jpg",
+    },
   ],
   uppers: [
     {
