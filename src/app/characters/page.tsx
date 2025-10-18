@@ -3,6 +3,7 @@
 import { Orbitron, Barlow_Condensed, Source_Sans_3 } from "next/font/google";
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
 const orbitron = Orbitron({
@@ -15,79 +16,82 @@ const sourceSans = Source_Sans_3({
   weight: ["400", "600"],
 });
 
-// Character data
 const characters = {
   rejects: [
     {
-      name: "Michael",
+      name: "Michael Adesanya",
       role: "Leader of the Rejects",
       power: "Siphoning",
+      slug: "michael",
       image: "/images/michael-poster.png",
     },
     {
-      name: "Sly",
+      name: "Sylvester Thompson",
       role: "Shadow Wielder",
       power: "Shadow Manipulation",
+      slug: "sylvester",
       image: "/assets/characters/sly.jpg",
     },
     {
-      name: "Ben",
+      name: "Benjamin Obiefuna",
       role: "Heart Of Omajiri",
       power: "Super strength",
-      image: "/assets/characters/sly.jpg",
+      slug: "benjamin",
+      image: "/assets/characters/ben.jpg",
     },
     {
-      name: "Nofisat",
+      name: "Nofisat Abdulahi",
       role: "The Ninefold Guard",
       power: "Ninefold Defense",
+      slug: "nofisat",
       image: "/assets/characters/nofisat.jpg",
     },
     {
-      name: "Ayomide",
+      name: "Ayomide Darasimi",
       role: "Strategist",
       power: "Super Intellect, Wind Manipulation",
-      image: "/assets/characters/sly.jpg",
+      slug: "ayomide",
+      image: "/assets/characters/ayomide.jpg",
     },
     {
-      name: "Cynthia",
+      name: "Cynthia Uwakiwé",
       role: "Leader Of the Omajiri Resistance",
       power: "Electricity",
-      image: "/assets/characters/sly.jpg",
-    },
-    {
-      name: "Okoro",
-      role: "Reject rebel",
-      power: "Undisclosed",
-      image: "/assets/characters/sly.jpg",
+      slug: "cynthia",
+      image: "/assets/characters/cynthia.jpg",
     },
   ],
   uppers: [
     {
-      name: "Jide",
+      name: "Jide Balogun",
       role: "Supreme Commander",
       power: "Unknown",
+      slug: "jide",
       image: "/assets/characters/jide.jpg",
     },
     {
-      name: "Alyssa",
-      role: "Jide's daughter",
+      name: "Alyssa Balogun",
+      role: "Jide’s Daughter",
       power: "Super speed",
-      image: "/assets/characters/jide.jpg",
+      slug: "alyssa",
+      image: "/assets/characters/alyssa.jpg",
     },
     {
       name: "Sir Alex",
       role: "Master Lieutenant",
       power: "Earth Manipulation",
-      image: "/assets/characters/jide.jpg",
+      slug: "sir-alex",
+      image: "/assets/characters/sir-alex.jpg",
     },
   ],
 };
+
 
 export default function CharactersPage() {
   const [faction, setFaction] = useState<"rejects" | "uppers">("rejects");
 
   return (
-    <section className="min-h-screen px-6 py-16 md:px-12 text-center text-white bg-[#0A0A0A]">
+    <section className="min-h-screen px-6 py-16 md:px-12 text-center text-white">
       {/* Header */}
       <div className="max-w-3xl mx-auto">
         <h1 className={`${orbitron.className} text-3xl md:text-6xl font-bold`}>
@@ -131,31 +135,37 @@ export default function CharactersPage() {
           className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 mt-12"
         >
           {characters[faction].map((char) => (
-            <motion.div
+            <Link
               key={char.name}
-              whileHover={{ scale: 1.05 }}
-              className="bg-[#111] p-4 rounded-2xl border border-gray-800 shadow-lg hover:shadow-purple-500/10 transition-all"
+              href={`/characters/${char.slug}`}
+              scroll={false} // 💫 important for intercepting routes
+              className="group"
             >
-              <div className="relative w-full h-64 rounded-lg overflow-hidden">
-                <Image
-                  src={char.image}
-                  alt={char.name}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <h3
-                className={`${orbitron.className} text-xl mt-4 font-semibold`}
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="bg-[#111] p-4 rounded-2xl border border-gray-800 shadow-lg hover:shadow-purple-500/10 transition-all"
               >
-                {char.name}
-              </h3>
-              <p className={`${barlow.className} text-purple-400`}>
-                {char.role}
-              </p>
-              <p className={`${sourceSans.className} text-gray-400 mt-2`}>
-                Power: {char.power}
-              </p>
-            </motion.div>
+                <div className="relative w-full h-80 rounded-lg overflow-hidden">
+                  <Image
+                    src={char.image}
+                    alt={char.name}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+                <h3
+                  className={`${orbitron.className} text-xl mt-4 font-semibold`}
+                >
+                  {char.name}
+                </h3>
+                <p className={`${barlow.className} text-purple-400`}>
+                  {char.role}
+                </p>
+                <p className={`${sourceSans.className} text-gray-400 mt-2`}>
+                  Power: {char.power}
+                </p>
+              </motion.div>
+            </Link>
           ))}
         </motion.div>
       </AnimatePresence>
