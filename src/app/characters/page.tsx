@@ -1,11 +1,13 @@
 "use client";
 
-import { Orbitron, Barlow_Condensed, Source_Sans_3 } from "next/font/google";
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import { Orbitron, Barlow_Condensed, Source_Sans_3 } from "next/font/google";
+import { characters } from "@/data/characters"; 
 
+// Fonts
 const orbitron = Orbitron({
   subsets: ["latin"],
   weight: ["400", "700", "900"],
@@ -16,77 +18,6 @@ const sourceSans = Source_Sans_3({
   weight: ["400", "600"],
 });
 
-const characters = {
-  rejects: [
-    {
-      name: "Michael Adesanya",
-      role: "Leader of the Rejects",
-      power: "Siphoning",
-      slug: "michael",
-      image: "/images/michael-poster.png",
-    },
-    {
-      name: "Sylvester Thompson",
-      role: "Shadow Wielder",
-      power: "Shadow Manipulation",
-      slug: "sylvester",
-      image: "/assets/characters/sly.jpg",
-    },
-    {
-      name: "Benjamin Obiefuna",
-      role: "Heart Of Omajiri",
-      power: "Super strength",
-      slug: "benjamin",
-      image: "/assets/characters/ben.jpg",
-    },
-    {
-      name: "Nofisat Abdulahi",
-      role: "The Ninefold Guard",
-      power: "Ninefold Defense",
-      slug: "nofisat",
-      image: "/assets/characters/nofisat.jpg",
-    },
-    {
-      name: "Ayomide Darasimi",
-      role: "Strategist",
-      power: "Super Intellect, Wind Manipulation",
-      slug: "ayomide",
-      image: "/assets/characters/ayomide.jpg",
-    },
-    {
-      name: "Cynthia Uwakiwé",
-      role: "Leader Of the Omajiri Resistance",
-      power: "Electricity",
-      slug: "cynthia",
-      image: "/assets/characters/cynthia.jpg",
-    },
-  ],
-  uppers: [
-    {
-      name: "Jide Balogun",
-      role: "Supreme Commander",
-      power: "Unknown",
-      slug: "jide",
-      image: "/assets/characters/jide.jpg",
-    },
-    {
-      name: "Alyssa Balogun",
-      role: "Jide’s Daughter",
-      power: "Super speed",
-      slug: "alyssa",
-      image: "/assets/characters/alyssa.jpg",
-    },
-    {
-      name: "Sir Alex",
-      role: "Master Lieutenant",
-      power: "Earth Manipulation",
-      slug: "sir-alex",
-      image: "/assets/characters/sir-alex.jpg",
-    },
-  ],
-};
-
-
 export default function CharactersPage() {
   const [faction, setFaction] = useState<"rejects" | "uppers">("rejects");
 
@@ -94,7 +25,9 @@ export default function CharactersPage() {
     <section className="min-h-screen px-6 py-16 md:px-12 text-center text-white">
       {/* Header */}
       <div className="max-w-3xl mx-auto">
-        <h1 className={`${orbitron.className} text-3xl md:text-6xl font-bold`}>
+        <h1
+          className={`${orbitron.className} text-4xl md:text-6xl font-extrabold`}
+        >
           Mavericks Of The State
         </h1>
         <p
@@ -106,44 +39,57 @@ export default function CharactersPage() {
       </div>
 
       {/* Faction Tabs */}
-      <div className="flex justify-center gap-6 mt-12">
+      <nav
+        className="flex justify-center gap-6 mt-12"
+        aria-label="Character factions"
+      >
         {["rejects", "uppers"].map((key) => (
           <button
             key={key}
             onClick={() => setFaction(key as "rejects" | "uppers")}
-            className={`${
-              barlow.className
-            } uppercase tracking-wider text-lg md:text-xl border-b-2 pb-1 transition-all duration-300 ${
-              faction === key
-                ? "border-purple-500 text-purple-400"
-                : "border-transparent text-gray-500 hover:text-white"
-            }`}
+            aria-selected={faction === key}
+            className={`
+              ${barlow.className}
+              uppercase tracking-wider text-lg md:text-xl border-b-2 pb-1 transition-all duration-300
+              ${
+                faction === key
+                  ? "border-purple-500 text-purple-400"
+                  : "border-transparent text-gray-500 hover:text-white"
+              }
+            `}
           >
             {key}
           </button>
         ))}
+      </nav>
+
+      {/* Faction Label */}
+      <div className="mt-6 text-sm uppercase tracking-widest text-gray-400">
+        Currently viewing:{" "}
+        <span className="text-purple-400 font-semibold">{faction}</span>
       </div>
 
       {/* Character Grid */}
       <AnimatePresence mode="wait">
         <motion.div
           key={faction}
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -30 }}
-          transition={{ duration: 0.4 }}
+          initial={{ opacity: 0, x: faction === "rejects" ? -50 : 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: faction === "rejects" ? 50 : -50 }}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
           className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 mt-12"
         >
-          {characters[faction].map((char) => (
+          {characters[faction]?.map((char) => (
             <Link
-              key={char.name}
+              key={char.slug}
               href={`/characters/${char.slug}`}
-              scroll={false} // 💫 important for intercepting routes
+              scroll={false}
               className="group"
             >
               <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="bg-[#111] p-4 rounded-2xl border border-gray-800 shadow-lg hover:shadow-purple-500/10 transition-all"
+                whileHover={{ scale: 1.05, rotateZ: 0.5 }}
+                transition={{ type: "spring", stiffness: 180, damping: 12 }}
+                className="bg-[#111] p-4 rounded-2xl border border-gray-800 shadow-lg hover:shadow-purple-500/10 transition-all cursor-none"
               >
                 <div className="relative w-full h-80 rounded-lg overflow-hidden">
                   <Image
@@ -154,7 +100,7 @@ export default function CharactersPage() {
                   />
                 </div>
                 <h3
-                  className={`${orbitron.className} text-xl mt-4 font-semibold`}
+                  className={`${orbitron.className} text-xl mt-4 font-semibold group-hover:text-purple-400 transition-colors`}
                 >
                   {char.name}
                 </h3>
@@ -169,6 +115,13 @@ export default function CharactersPage() {
           ))}
         </motion.div>
       </AnimatePresence>
+
+      {/* Empty state fallback */}
+      {characters[faction]?.length === 0 && (
+        <p className="text-gray-500 italic mt-12">
+          No characters revealed yet...
+        </p>
+      )}
     </section>
   );
 }
