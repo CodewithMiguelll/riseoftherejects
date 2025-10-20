@@ -20,7 +20,7 @@ export const characters: Record<"rejects" | "uppers", Character[]> = {
       faction: "rejects",
       image: "/images/michael-poster.png",
       description:
-        "Once powerless, Michael rose from the ashes of tragedy to lead the Rejects against the oppressive Uppers.",
+        "Once a boy who lost everything in the flames, Michael carries the weight of a world that burned him first. His ability to drain energy—both power and life—makes him a weapon of last resort, and a symbol of fear to friend and foe alike. Despite the ghosts that follow him, his conviction to break the Upper’s hold burns brighter than any inferno. He doesn’t seek leadership—he’s just the only one still standing.",
     },
     {
       name: "Sylvester Thompson",
@@ -29,6 +29,8 @@ export const characters: Record<"rejects" | "uppers", Character[]> = {
       slug: "sylvester",
       faction: "rejects",
       image: "/assets/characters/sly.jpg",
+      description:
+        "Cool, cunning, and always one step ahead, Sly thrives where light dares not linger. His mastery of shadows turns fear itself into an ally, but every time he slips into the dark, it takes a piece of him with it. Beneath his sarcasm lies a loyalty few will ever earn. To Sly, rebellion isn’t just war—it’s art.",
     },
     {
       name: "Benjamin Obiefuna",
@@ -37,6 +39,8 @@ export const characters: Record<"rejects" | "uppers", Character[]> = {
       slug: "benjamin",
       faction: "rejects",
       image: "/assets/characters/ben.jpg",
+      description:
+        "Ben’s strength could bring cities to their knees, but it’s his heart that holds the Rejects together. A former miner turned rebel brawler, he fights for every forgotten soul left to rot below. His laugh shakes walls, his fists break them—but both are driven by love, not rage. Where Michael burns and Sly shadows, Ben anchors them in hope.",
     },
     {
       name: "Nofisat Abdulahi",
@@ -45,6 +49,8 @@ export const characters: Record<"rejects" | "uppers", Character[]> = {
       slug: "nofisat",
       faction: "rejects",
       image: "/assets/characters/nofisat.jpg",
+      description:
+        "They say she can’t be broken, not until her ninth fall. Nofisat’s defensive power makes her the team’s shield, but her real armor is her resolve. A woman of few words, she believes freedom is a duty, not a dream. When she moves, she moves like faith itself—silent, steady, and unshakable.",
     },
     {
       name: "Ayomide Darasimi",
@@ -53,6 +59,7 @@ export const characters: Record<"rejects" | "uppers", Character[]> = {
       slug: "ayomide",
       faction: "rejects",
       image: "/assets/characters/ayomide.jpg",
+      description:""
     },
     {
       name: "Cynthia Uwakiwé",
