@@ -59,7 +59,8 @@ export const characters: Record<"rejects" | "uppers", Character[]> = {
       slug: "ayomide",
       faction: "rejects",
       image: "/assets/characters/ayomide.jpg",
-      description:""
+      description:
+        "A genius born in the ruins, Ayomide’s intellect cuts sharper than any blade. Her twin gifts—super intellect and control over the wind—make her both the brains and breath of Omajiri’s rebellion. Every plan she crafts flutters between madness and brilliance, but her true weapon is foresight. She doesn’t fight for victory—she fights to ensure the Rejects never lose again.",
     },
     {
       name: "Cynthia Uwakiwé",
@@ -68,6 +69,8 @@ export const characters: Record<"rejects" | "uppers", Character[]> = {
       slug: "cynthia",
       faction: "rejects",
       image: "/assets/characters/cynthia.jpg",
+      description:
+        "Leader of the Omajiri resistance, Cynthia’s electricity mirrors her spirit—beautiful, dangerous, and impossible to contain. Her charisma draws people in, her lightning keeps them safe. She’s the voice that turns fear into defiance, the spark that reignites dead hope. And when she smiles, even the storm pauses to listen.",
     },
   ],
   uppers: [
@@ -78,6 +81,8 @@ export const characters: Record<"rejects" | "uppers", Character[]> = {
       slug: "jide",
       faction: "uppers",
       image: "/assets/characters/jide.jpg",
+      description:
+        "A visionary or a tyrant, depending on which side of the wall you stand. Jide rebuilt Nigeria into the “Republic of Order,” but at the cost of freedom and compassion. To him, control is salvation—chaos the enemy. His true power isn’t his rumored gift, but the loyalty he commands through fear and faith alike.",
     },
     {
       name: "Alyssa Balogun",
@@ -86,6 +91,8 @@ export const characters: Record<"rejects" | "uppers", Character[]> = {
       slug: "alyssa",
       faction: "uppers",
       image: "/assets/characters/alyssa.jpg",
+      description:
+        "Born in privilege and trained for perfection, Alyssa runs faster than thought and sees the world in split-seconds. Her father’s daughter in name, but not in heart—she questions the price of their order even as she enforces it. Every mission she completes brings her closer to a truth she’s terrified to face: maybe the Rejects aren’t the villains after all.",
     },
     {
       name: "Sir Alex",
@@ -94,6 +101,8 @@ export const characters: Record<"rejects" | "uppers", Character[]> = {
       slug: "sir-alex",
       faction: "uppers",
       image: "/assets/characters/sir-alex.jpg",
+      description:
+        "The iron pillar beneath Jide’s regime, Sir Alex commands both earth and soldiers with unyielding force. Once a farmer, now a war general, he believes discipline is mercy. His hands have built and buried empires, yet his loyalty remains unshaken—at least for now. Beneath the armor, a conscience rumbles, waiting for the right tremor to split it open.",
     },
   ],
 };
