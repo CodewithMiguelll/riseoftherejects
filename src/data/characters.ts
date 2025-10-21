@@ -28,7 +28,7 @@ export const characters: Record<"rejects" | "uppers", Character[]> = {
       power: "Shadow Manipulation",
       slug: "sylvester",
       faction: "rejects",
-      image: "/assets/characters/sly.jpg",
+      image: "/images/sly-poster.png",
       description:
         "Cool, cunning, and always one step ahead, Sly thrives where light dares not linger. His mastery of shadows turns fear itself into an ally, but every time he slips into the dark, it takes a piece of him with it. Beneath his sarcasm lies a loyalty few will ever earn. To Sly, rebellion isn’t just war—it’s art.",
     },
@@ -38,7 +38,7 @@ export const characters: Record<"rejects" | "uppers", Character[]> = {
       power: "Super strength",
       slug: "benjamin",
       faction: "rejects",
-      image: "/assets/characters/ben.jpg",
+      image: "/images/ben-poster.png",
       description:
         "Ben’s strength could bring cities to their knees, but it’s his heart that holds the Rejects together. A former miner turned rebel brawler, he fights for every forgotten soul left to rot below. His laugh shakes walls, his fists break them—but both are driven by love, not rage. Where Michael burns and Sly shadows, Ben anchors them in hope.",
     },
@@ -48,7 +48,7 @@ export const characters: Record<"rejects" | "uppers", Character[]> = {
       power: "Ninefold Defense",
       slug: "nofisat",
       faction: "rejects",
-      image: "/assets/characters/nofisat.jpg",
+      image: "/images/nofisat-poster.png",
       description:
         "They say she can’t be broken, not until her ninth fall. Nofisat’s defensive power makes her the team’s shield, but her real armor is her resolve. A woman of few words, she believes freedom is a duty, not a dream. When she moves, she moves like faith itself—silent, steady, and unshakable.",
     },
@@ -58,7 +58,7 @@ export const characters: Record<"rejects" | "uppers", Character[]> = {
       power: "Super Intellect, Wind Manipulation",
       slug: "ayomide",
       faction: "rejects",
-      image: "/assets/characters/ayomide.jpg",
+      image: "/images/ayomide-poster.png",
       description:
         "A genius born in the ruins, Ayomide’s intellect cuts sharper than any blade. Her twin gifts—super intellect and control over the wind—make her both the brains and breath of Omajiri’s rebellion. Every plan she crafts flutters between madness and brilliance, but her true weapon is foresight. She doesn’t fight for victory—she fights to ensure the Rejects never lose again.",
     },
@@ -68,7 +68,7 @@ export const characters: Record<"rejects" | "uppers", Character[]> = {
       power: "Electricity",
       slug: "cynthia",
       faction: "rejects",
-      image: "/assets/characters/cynthia.jpg",
+      image: "/images/cynthia-poster.png",
       description:
         "Leader of the Omajiri resistance, Cynthia’s electricity mirrors her spirit—beautiful, dangerous, and impossible to contain. Her charisma draws people in, her lightning keeps them safe. She’s the voice that turns fear into defiance, the spark that reignites dead hope. And when she smiles, even the storm pauses to listen.",
     },
