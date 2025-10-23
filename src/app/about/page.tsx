@@ -71,7 +71,7 @@ export default function AboutPage() {
             >
               Hi, I’m <span className="font-semibold text-white">Miguel</span> —
               the writer, designer, and dreamer behind{" "}
-              <em>Rise of the Rejects.</em>
+              <em>Rise of the Rejects.</em>{" "}
               This project started as more than fiction — it’s my stand against
               the apathy that silence breeds. For a long time, I felt powerless
               in the face of corruption and classism in my country. But through
