@@ -68,7 +68,7 @@ export default function AboutPage() {
           <div className="flex justify-center md:justify-start">
             <div className="w-full max-w-sm md:max-w-md overflow-hidden rounded-2xl">
               <Image
-                src="/assets/creator-photo.jpg"
+                src="/images/miguel-rotr.jpg"
                 alt="Photo of Miguel — Creator of ROTR"
                 width={500}
                 height={500}
