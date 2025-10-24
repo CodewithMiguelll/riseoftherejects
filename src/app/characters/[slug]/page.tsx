@@ -19,7 +19,7 @@ interface CharacterPageProps {
 }
 
 export default async function CharacterPage({ params }: CharacterPageProps) {
-  const { slug } = await params; // ⚠️ unwrap the Promise (Next.js 15+ change)
+  const { slug } = await params; 
   const character = getCharacterBySlug(slug);
 
   if (!character) return notFound();
