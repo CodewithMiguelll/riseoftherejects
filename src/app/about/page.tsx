@@ -2,6 +2,8 @@
 
 import { Orbitron, Barlow_Condensed, Source_Sans_3 } from "next/font/google";
 import Image from "next/image";
+import { Instagram, Globe } from "lucide-react";
+import { motion } from "motion/react";
 
 const orbitron = Orbitron({ subsets: ["latin"], weight: ["700", "900"] });
 const barlow = Barlow_Condensed({ subsets: ["latin"], weight: ["400", "600"] });
@@ -9,6 +11,23 @@ const sourceSans = Source_Sans_3({
   subsets: ["latin"],
   weight: ["400", "600"],
 });
+
+const socials = [
+  {
+    name: "Instagram",
+    href: "https://instagram.com/_big.migz",
+    target: "_blank",
+    icon: <Instagram className="w-6 h-6" />,
+    color: "hover:text-pink-500",
+  },
+  {
+    name: "Stage32",
+    href: "https://stage32.com/miguelwrites",
+    target: "_blank",
+    icon: <Globe className="w-6 h-6" />,
+    color: "hover:text-purple-400",
+  },
+];
 
 export default function AboutPage() {
   return (
@@ -69,56 +88,74 @@ export default function AboutPage() {
             <p
               className={`${sourceSans.className} text-lg text-gray-300 leading-relaxed`}
             >
-              Hi, I’m <span className="font-semibold text-white">Miguel</span> —
-              the writer, designer, and dreamer behind{" "}
-              <em>Rise of the Rejects.</em>{" "}
-              This project started as more than fiction — it’s my stand against
-              the apathy that silence breeds. For a long time, I felt powerless
-              in the face of corruption and classism in my country. But through
-              this story, I found a way to fight — to let my characters carry
-              the rebellion I couldn’t voice. Like Michael, I’ve learned that
-              resistance starts small: with conviction, with courage, with
-              words.
+              Hi, I’m <span className="font-bold text-white">Miguel</span> — the
+              writer, designer, and dreamer behind Rise of the Rejects. This
+              project began as more than fiction — it became a mirror, a
+              reminder that hope still has a place in a world that often forgets
+              it. There was a time I felt small in the face of the struggles
+              around me — the inequality, the silence, the weight of “that’s
+              just how things are.” But through this story, I found my voice
+              again. I learned, like Michael, that rebellion isn’t just about
+              defiance — it’s about belief. Belief that light still fights its
+              way through the cracks.
             </p>
 
             <p className={`${sourceSans.className} text-gray-400 italic`}>
-              “Even if I can’t change the world right now, I can tell a story
-              that makes us want to.”
+              "Even if I can’t change the world right now, I can tell a story
+              that reminds us it’s worth saving.”
             </p>
           </div>
         </div>
       </section>
-
       {/* SOCIALS SECTION */}
-      <section className="bg-[#0b0b0b] text-white py-12">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2
+      <section className="bg-[#0b0b0b] text-white py-20 relative overflow-hidden">
+        {/* Subtle glowing background */}
+        <div className="absolute inset-0 bg-gradient-to-t from-purple-900/10 via-transparent to-transparent blur-3xl pointer-events-none" />
+
+        <div className="relative max-w-4xl mx-auto text-center">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
             className={`${orbitron.className} text-3xl md:text-5xl font-bold mb-6`}
           >
-            Let's Be Friends
-          </h2>
-          <p
-            className={`${sourceSans.className} text-lg md:text-xl text-gray-300 mb-8`}
+            Let’s Be Friends
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1, duration: 0.6 }}
+            viewport={{ once: true }}
+            className={`${sourceSans.className} text-lg md:text-xl text-gray-300 mb-10`}
           >
-            Follow me on our social media channels to stay updated on the latest
-            news and developments.
-          </p>
-          <div className="flex justify-center space-x-4">
-            <a href="#" className="text-purple-500 hover:underline">
-              Twitter
-            </a>
-            <a href="#" className="text-purple-500 hover:underline">
-              Instagram
-            </a>
-            <a href="#" className="text-purple-500 hover:underline">
-              Facebook
-            </a>
-            <a href="#" className="text-purple-500 hover:underline">
-              Stage32
-            </a>
+            Follow me for behind-the-scenes glimpses, creative updates, and the
+            sparks that power Rise of the Rejects.
+          </motion.p>
+
+          <div className="flex justify-center flex-wrap gap-6 md:gap-10">
+            {socials.map((social, idx) => (
+              <motion.a
+                key={idx}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{
+                  scale: 1.1,
+                  y: -4, // just a little lift
+                }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ type: "spring", stiffness: 250, damping: 14 }}
+                className={`flex items-center gap-3 text-gray-400 transition-all duration-300 ${social.color}`}
+              >
+                <span className="text-purple-400">{social.icon}</span>
+                <span className="text-lg font-medium">{social.name}</span>
+              </motion.a>
+            ))}
           </div>
         </div>
-      </section>
+      </section>{" "}
     </>
   );
 }
