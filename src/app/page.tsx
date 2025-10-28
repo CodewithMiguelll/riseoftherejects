@@ -1,18 +1,28 @@
 "use client";
 import Link from "next/link";
-import { Orbitron, Oswald } from "next/font/google";
+import { Orbitron, Barlow_Condensed, Source_Sans_3 } from "next/font/google";
 import { FocusCards } from "@/components/ui/focus-cards";
-import { Button } from "@/components/ui/button";
 import ReactFlipCard from "reactjs-flip-card";
 import { ParallaxScroll } from "@/components/ui/parallax-scroll";
 import Image from "next/image";
 
+// Font configurations
+
+// Heading Font
 const orbitron = Orbitron({
   subsets: ["latin"],
   weight: ["400", "500", "700", "900"],
 });
 
-const oswald = Oswald({
+
+// Subheading Font
+const barlow = Barlow_Condensed({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+// Body Font
+const sourceSans = Source_Sans_3({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
@@ -92,27 +102,38 @@ export default function Home() {
       <section className="py-24 md:py-36 px-5 text-center">
         <div className="flex flex-col items-center justify-center">
           <h1
+            data-aos="fade-up"
+            data-aos-duration="1000"
             className={`${orbitron.className} text-2xl md:text-7xl font-bold`}
           >
             In a nation divided, rebellion ignites.
           </h1>
-          <p className="text-lg md:text-xl mt-2.5 font-medium text-pretty">
+          <p
+            data-aos="fade-up"
+            data-aos-duration="1300"
+            className={`${sourceSans.className} text-lg md:text-xl mt-2.5 font-medium text-pretty`}
+          >
             The Uppers rule, The Lowers endure... but the Rejects refuse to
             kneel.
           </p>
-          <div className="flex flex-row items-center justify-center gap-3.5 mt-5">
+          <div className="flex flex-row items-center justify-center gap-4.5 mt-5">
             <Link href="/characters">
-              <Button className="hover:bg-[#9233eac9] p-[25px] bg-[#9333ea] hover:text-[#e5e7e8] cursor-none">
+              <button
+                data-aos="fade-up"
+                data-aos-duration="1400"
+                className="transition-all bg-[#c4b6c1] hover:bg-[#c4b6c1cc] text-[#060506] p-4 rounded-md hover:-translate-y-1 cursor-none"
+              >
                 Meet The Characters
-              </Button>
+              </button>
             </Link>
             <Link href="/factions">
-              <Button
-                className="p-[25px] bg-[#3b83f6] hover:bg-[#3b83f6cc] hover:text-[#e5e7e8] cursor-none"
-                variant={"ghost"}
+              <button
+                data-aos="fade-up"
+                data-aos-duration="1500"
+                className="transition-all bg-[#5d4b51] hover:bg-[#5d4b51cc] p-4 rounded-md hover:-translate-y-1 cursor-none"
               >
                 Pick A Side
-              </Button>
+              </button>
             </Link>
           </div>
         </div>
@@ -120,10 +141,14 @@ export default function Home() {
 
       {/* FACTIONS SECTION */}
       <section className=" md:py-10 px-4">
-        <h1 className="text-2xl md:text-4xl text-center font-bold">
+        <h1
+          className={`${barlow.className} text-2xl md:text-5xl text-center font-bold`}
+        >
           The Republic is divided... which side are you on?
         </h1>
-        <p className="text-sm md:text-base text-center font-medium text-pretty mt-3.5">
+        <p
+          className={`${sourceSans.className} text-sm md:text-base text-center font-medium text-pretty mt-3.5`}
+        >
           Choose wisely. Your fate depends on it.
         </p>
         <div className="mt-10 mb-12">
@@ -131,7 +156,7 @@ export default function Home() {
         </div>
         <div className="flex justify-center">
           <Link href="/factions" className="w-full max-w-sm">
-            <button className="w-full bg-[#9333ea] text-[#e5e7e8] font-bold py-3 rounded transition-all duration-100 ease-in-out hover:bg-[#9233eac9] cursor-none">
+            <button className="w-full bg-[#c4b6c1] hover:bg-[#c4b6c1cc] text-[#060506] font-bold py-3 rounded transition-all duration-100 ease-in-out cursor-none">
               Pick A Side
             </button>
           </Link>
@@ -153,7 +178,9 @@ export default function Home() {
 
       {/* CHARACTERS SPOTLIGHT */}
       <section className="py-10 px-4">
-        <h1 className="text-2xl md:text-4xl text-center font-bold">
+        <h1
+          className={`${barlow.className} text-2xl md:text-5xl text-center font-bold`}
+        >
           Faces Of The Rebellion
         </h1>
         <p className="text-sm md:text-base text-center font-medium text-pretty mt-3.5">
@@ -162,6 +189,8 @@ export default function Home() {
         <div className="mt-10 mb-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
           {spotlightCharacters.map((char, idx) => (
             <div
+              data-aos="zoom-out"
+              data-aos-duration="1000"
               key={idx}
               className="w-72 h-96 mx-auto hover:cursor-none mb-2" // wrapper defines size
             >
@@ -174,7 +203,7 @@ export default function Home() {
                 frontStyle={{
                   borderRadius: "1rem",
                   padding: "1.5rem",
-                  background: "#3B82F68f",
+                  background: "#998185",
                   color: "white",
                   display: "flex",
                   flexDirection: "column",
@@ -210,7 +239,7 @@ export default function Home() {
         </div>
         <div className="flex justify-center items-center text-center">
           <Link href="/characters" className="w-full max-w-sm">
-            <button className="w-full bg-[#9233ea] text-white font-bold py-3 rounded transition-all duration-100 ease-in-out hover:bg-[#9233eac9] cursor-none">
+            <button className="w-full bg-[#c4b6c1] hover:bg-[#c4b6c1cc] text-[#060506] font-bold py-3 rounded transition-all duration-100 ease-in-out cursor-none">
               Meet The Characters
             </button>
           </Link>
@@ -219,11 +248,13 @@ export default function Home() {
 
       {/* TIMELINE SECTION */}
       <section className="py-16 px-6">
-        <h2 className="text-2xl md:text-4xl font-bold text-center mb-8">
+        <h2
+          className={`${barlow.className} text-2xl md:text-5xl text-center font-bold`}
+        >
           A History Written in Ashes
         </h2>
-        <div className="max-w-3xl mx-auto">
-          <ol className="relative border-l border-[#FACC15]">
+        <div className="max-w-3xl mx-auto mt-5">
+          <ol className="relative border-l border-[#998185]">
             {/* Event 1 */}
             <li className="mb-10 ml-6">
               <div className="absolute w-3 h-3 bg-[#121212] rounded-full -left-1.5 border border-white"></div>
@@ -277,7 +308,7 @@ export default function Home() {
         <div className="text-center mt-8">
           <Link
             href="/timeline"
-            className="inline-block bg-[#9233ea] cursor-none text-[#e5e7e8] font-bold py-3 px-6 rounded transition-all duration-150 ease-in-out hover:bg-[#9233eac9]"
+            className="inline-block cursor-none bg-[#c4b6c1] hover:bg-[#c4b6c1cc] text-[#060506] font-bold py-3 px-6 rounded transition-all duration-150 ease-in-out"
           >
             Explore the Full Timeline
           </Link>
@@ -286,10 +317,14 @@ export default function Home() {
 
       {/* PARALLAX SECTION */}
       <section className="py-24 md:py-36 px-5 text-[#e5e7e8]">
-        <h1 className="text-2xl md:text-4xl font-bold text-center mb-8">
+        <h1
+          className={`${barlow.className} text-2xl md:text-5xl text-center font-bold`}
+        >
           Step Into The Republic
         </h1>
-        <p className="text-lg md:text-xl mt-2.5 font-medium text-pretty text-center">
+        <p
+          className={`${sourceSans.className} text-lg md:text-xl mt-2.5 font-medium text-pretty text-center`}
+        >
           The Uppers built walls and checkpoints, but every barrier tells a
           story. This is the Republic they claim. Will you accept it?
         </p>
@@ -299,10 +334,34 @@ export default function Home() {
       </section>
 
       {/* FOOTER CTA */}
-      <section className="py-10 px-4 text-center">
-        <h2 className="text-2xl md:text-4xl font-bold mb-4 text-white">
-          Join the Rebellion
+      <section className="py-10 px-4 text-center bg-[#998185] text-[#e5e7e8] rounded-lg mx-4 md:mx-20 mb-10">
+        <h2
+          className={`${barlow.className} text-2xl md:text-4xl font-bold mb-4 text-white`}
+        >
+          This Is Just The Beginning
         </h2>
+        <p
+          className={`${sourceSans.className} mb-8 text-xs font-normal text-[#e5e7e8] md:text-lg`}
+        >
+          The story of the Rejects is still being written. Step inside, and be
+          part of the legend.
+        </p>
+        <div className="flex justify-center items-center text-center gap-3.5">
+          <Link href="/characters">
+            <button className="bg-[#c4b6c1] hover:bg-[#c4b6c1cc] text-[#060506] cursor-none font-bold py-3 px-6 rounded transition-all">
+              Meet The Characters
+            </button>
+          </Link>
+
+          <Link
+            href={"https://stage32.com/miguelwrites"}
+            target="_blank" rel="noopener noreferrer"
+          >
+            <button className="bg-[#5d4b51] hover:bg-[#5d4b51cc] cursor-none text-[#efebee] font-bold py-3 px-6 rounded transition-all">
+              Follow The Author
+            </button>
+          </Link>
+        </div>
       </section>
     </>
   );

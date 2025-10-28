@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "aos/dist/aos.css";
+import AOSInit from "@/components/AOSInit";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import CustomCursor from "@/components/custom-cursor";
@@ -22,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
+        <AOSInit />
         <Header />
         <main>{children}</main>
         <Footer />

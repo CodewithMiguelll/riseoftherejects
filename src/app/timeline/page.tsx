@@ -1,12 +1,33 @@
+import { Orbitron, Barlow_Condensed, Source_Sans_3 } from "next/font/google";
 import { Timeline } from "@/components/ui/timeline";
 import Image from "next/image";
+
+// Font configurations
+const orbitron = Orbitron({
+  subsets: ["latin"],
+  weight: ["400", "500", "700", "900"],
+});
+
+// Subheading Font
+const barlow = Barlow_Condensed({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+// Body Font
+const sourceSans = Source_Sans_3({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 const data = [
   {
     title: "October 2nd, 2045",
     content: (
       <div>
-        <p className="mb-8 text-xs font-normal text-[#e5e7e8] md:text-lg">
+        <p
+          className={`${sourceSans.className} mb-8 text-xs font-normal text-[#e5e7e8] md:text-lg`}
+        >
           Serum I-960 is launched, marking the dawn of a new age. Ordinary
           Nigerians awaken to extraordinary abilities—strength, speed,
           perception beyond human limits. At first, it is hailed as a miracle, a
@@ -37,7 +58,9 @@ const data = [
     title: "May 7th, 2065",
     content: (
       <div>
-        <p className="mb-8 text-xs font-normal text-[#e5e7e8] md:text-lg ">
+        <p
+          className={`${sourceSans.className} mb-8 text-xs font-normal text-[#e5e7e8] md:text-lg`}
+        >
           Tensions between empowered individuals and those left behind finally
           ignite. Cities burn as factions rise, each fighting for dominance and
           survival. Families are torn apart, governments collapse under the
@@ -68,7 +91,9 @@ const data = [
     title: "October 1st, 2068",
     content: (
       <div>
-        <p className="mb-8 text-xs font-normal text-[#e5e7e8] md:text-lg ">
+        <p
+          className={`${sourceSans.className} mb-8 text-xs font-normal text-[#e5e7e8] md:text-lg `}
+        >
           In the aftermath of chaos, one man emerges from the shadows: Jide. A
           charismatic leader with promises of rebuilding Nigeria into a shining
           utopia. He introduces the Faction System, organizing society into
@@ -98,7 +123,9 @@ const data = [
     title: "August 22nd, 2070",
     content: (
       <div>
-        <p className="mb-8 text-xs font-normal text-[#e5e7e8] md:text-lg">
+        <p
+          className={`${sourceSans.className} mb-8 text-xs font-normal text-[#e5e7e8] md:text-lg`}
+        >
           Jide tightens his grip. Under the guise of national security, border
           checkpoints sprout across the nation—harmless at first glance, but
           designed to suppress powered individuals. Nullisyn, a
@@ -128,7 +155,9 @@ const data = [
     title: "Recently",
     content: (
       <div>
-        <p className="mb-8 text-xs font-normal text-[#e5e7e8] md:text-lg ">
+        <p
+          className={`${sourceSans.className} mb-8 text-xs font-normal text-[#e5e7e8] md:text-lg `}
+        >
           Nigeria now exists as a totalitarian state. Surveillance is constant,
           rebellion is crushed before it can form, and Nullisyn keeps the masses
           subdued. Yet, in the shadows of Lagos and beyond, whispers begin to

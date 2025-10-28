@@ -21,7 +21,7 @@ export default function Header() {
         {/* Logo */}
         <Link
           href="/"
-          className={`${rubik_glitch.className} text-xl font-bold text-white cursor-none`}
+          className={`${rubik_glitch.className} md:text-lg text-xl font-bold text-white cursor-none`}
         >
           RISE OF THE REJECTS
         </Link>
