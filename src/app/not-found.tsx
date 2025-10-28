@@ -41,7 +41,6 @@ export default function NotFound() {
         </Link>
       </div>
 
-      {/* Optional Flavor Text at the Bottom */}
       <p className="mt-12 text-sm text-neutral-500 italic">
         "Nullisyn protocols prevent unauthorized access beyond this point"
       </p>
