@@ -48,7 +48,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     <div className="w-full font-sans md:px-10" ref={containerRef}>
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
         <h2
-          className={`${orbitron.className} text-2xl md:text-6xl mb-4 text-[#e5e7e8] max-w-4xl`}
+          className={`${orbitron.className} text-2xl md:text-6xl mb-4 text-[#e5e7e8] max-w-4xl font-bold`}
         >
           Chronicles Of A Fractured Nation
         </h2>
