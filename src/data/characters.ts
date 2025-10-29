@@ -80,7 +80,7 @@ export const characters: Record<"rejects" | "uppers", Character[]> = {
       power: "Unknown",
       slug: "jide",
       faction: "uppers",
-      image: "/assets/characters/jide.jpg",
+      image: "/images/jide-poster.png",
       description:
         "A visionary or a tyrant, depending on which side of the wall you stand. Jide rebuilt Nigeria into the “Republic of Order,” but at the cost of freedom and compassion. To him, control is salvation—chaos the enemy. His true power isn’t his rumored gift, but the loyalty he commands through fear and faith alike.",
     },
@@ -90,7 +90,7 @@ export const characters: Record<"rejects" | "uppers", Character[]> = {
       power: "Super speed",
       slug: "alyssa",
       faction: "uppers",
-      image: "/assets/characters/alyssa.jpg",
+      image: "/images/alyssa-poster.png",
       description:
         "Born in privilege and trained for perfection, Alyssa runs faster than thought and sees the world in split-seconds. Her father’s daughter in name, but not in heart—she questions the price of their order even as she enforces it. Every mission she completes brings her closer to a truth she’s terrified to face: maybe the Rejects aren’t the villains after all.",
     },
@@ -100,9 +100,9 @@ export const characters: Record<"rejects" | "uppers", Character[]> = {
       power: "Earth Manipulation",
       slug: "sir-alex",
       faction: "uppers",
-      image: "/assets/characters/sir-alex.jpg",
+      image: "/images/sir-alex-poster.png",
       description:
-        "The iron pillar beneath Jide’s regime, Sir Alex commands both earth and soldiers with unyielding force. Once a farmer, now a war general, he believes discipline is mercy. His hands have built and buried empires, yet his loyalty remains unshaken—at least for now. Beneath the armor, a conscience rumbles, waiting for the right tremor to split it open.",
+        "The iron pillar beneath Jide’s regime, Sir Alex commands both earth and soldiers with unyielding force. Once a miner, now a war general, he believes discipline is mercy. His hands have built and buried empires, yet his loyalty remains unshaken—at least for now. Beneath the armor, a conscience rumbles, waiting for the right tremor to split it open.",
     },
   ],
 };
