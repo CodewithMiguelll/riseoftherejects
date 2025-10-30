@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     siteName: "Rise of the Rejects",
     images: [
       {
-        url: "/assets/og-image-factions.jpg",
+        url: "/assets/og-image-factions.png",
         width: 1200,
         height: 630,
         alt: "ROTR Factions",

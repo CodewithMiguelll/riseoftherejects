@@ -10,7 +10,7 @@ export const metadata: Metadata = {
       "Dive into the key moments that defined the struggle between Uppers, Lowers, and Rejects.",
     images: [
       {
-        url: "/assets/og-timeline.png",
+        url: "/assets/og-image-timeline.png",
         width: 1200,
         height: 630,
         alt: "ROTR Timeline of Events",

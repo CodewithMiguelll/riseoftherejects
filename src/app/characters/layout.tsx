@@ -17,7 +17,7 @@ export const metadata: Metadata = {
       "Meet the heroes, villains, and survivors that shape the world of Rise of the Rejects.",
     images: [
       {
-        url: "/assets/og-characters.jpg",
+        url: "/assets/og-image-characters.png",
         width: 1200,
         height: 630,
         alt: "ROTR Character Showcase",

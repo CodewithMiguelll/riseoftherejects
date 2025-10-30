@@ -10,7 +10,7 @@ export const metadata: Metadata = {
       "Learn more about the creator of ROTR and the vision behind this dystopian world.",
     images: [
       {
-        url: "/assets/og-image.jpg",
+        url: "/assets/og-image-about.png",
         width: 1200,
         height: 630,
         alt: "Rise of the Rejects - About Page",
