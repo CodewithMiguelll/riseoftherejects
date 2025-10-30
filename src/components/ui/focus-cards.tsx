@@ -11,6 +11,7 @@ export const Card = React.memo(
     hovered,
     setHovered,
   }: {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     card: any;
     index: number;
     hovered: number | null;
@@ -25,8 +26,8 @@ export const Card = React.memo(
       )}
     >
       <Image
-      width={800}
-      height={800}
+        width={800}
+        height={800}
         src={card.src}
         alt={card.title}
         className="object-cover absolute inset-0"

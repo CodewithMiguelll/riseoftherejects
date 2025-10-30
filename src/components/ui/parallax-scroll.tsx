@@ -13,9 +13,10 @@ export const ParallaxScroll = ({
   images: string[];
   className?: string;
 }) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const gridRef = useRef<any>(null);
-  const { scrollYProgress } = useScroll({ 
-  // remove this if your container is not fixed height
+  const { scrollYProgress } = useScroll({
+    // remove this if your container is not fixed height
   });
 
   const translateFirst = useTransform(scrollYProgress, [0, 1], [0, -200]);
