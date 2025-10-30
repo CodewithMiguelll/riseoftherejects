@@ -167,7 +167,7 @@ export default function Home() {
       <section className="py-16 px-6 ">
         <blockquote className="max-w-3xl mx-auto text-center">
           <p className="text-2xl md:text-4xl font-semibold leading-snug">
-            “We can't just sit and take it like good little boys, if not now,
+            “We can&apos;t just sit and take it like good little boys, if not now,
             then when?”
           </p>
           <footer className="mt-4 text-sm text-[#e5e7e8] font-medium">

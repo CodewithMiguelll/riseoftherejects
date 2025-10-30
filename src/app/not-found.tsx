@@ -42,7 +42,7 @@ export default function NotFound() {
       </div>
 
       <p className="mt-12 text-sm text-neutral-500 italic">
-        "Nullisyn protocols prevent unauthorized access beyond this point"
+        &quot;Nullisyn protocols prevent unauthorized access beyond this point&quot;
       </p>
     </div>
   );

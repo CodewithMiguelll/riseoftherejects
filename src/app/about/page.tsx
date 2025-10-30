@@ -101,8 +101,8 @@ export default function AboutPage() {
             </p>
 
             <p className={`${sourceSans.className} text-gray-400 italic`}>
-              "Even if I can’t change the world right now, I can tell a story
-              that reminds us it’s worth saving.”
+              &quot;Even if I can’t change the world right now, I can tell a story
+              that reminds us it’s worth saving.&quot;
             </p>
           </div>
         </div>

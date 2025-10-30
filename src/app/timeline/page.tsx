@@ -1,18 +1,9 @@
-import { Orbitron, Barlow_Condensed, Source_Sans_3 } from "next/font/google";
+import { Source_Sans_3 } from "next/font/google";
 import { Timeline } from "@/components/ui/timeline";
 import Image from "next/image";
 
-// Font configurations
-const orbitron = Orbitron({
-  subsets: ["latin"],
-  weight: ["400", "500", "700", "900"],
-});
 
-// Subheading Font
-const barlow = Barlow_Condensed({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
+//Font Configuration 
 
 // Body Font
 const sourceSans = Source_Sans_3({

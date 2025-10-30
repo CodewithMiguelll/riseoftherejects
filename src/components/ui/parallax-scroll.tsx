@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion } from "motion/react";
 
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export const ParallaxScroll = ({
   images,
@@ -42,7 +43,7 @@ export const ParallaxScroll = ({
               style={{ y: translateFirst }} // Apply the translateY motion value here
               key={"grid-1" + idx}
             >
-              <img
+              <Image
                 src={el}
                 className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
                 height="400"
@@ -55,7 +56,7 @@ export const ParallaxScroll = ({
         <div className="grid gap-10">
           {secondPart.map((el, idx) => (
             <motion.div style={{ y: translateSecond }} key={"grid-2" + idx}>
-              <img
+              <Image
                 src={el}
                 className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
                 height="400"
@@ -68,7 +69,7 @@ export const ParallaxScroll = ({
         <div className="grid gap-10">
           {thirdPart.map((el, idx) => (
             <motion.div style={{ y: translateThird }} key={"grid-3" + idx}>
-              <img
+              <Image
                 src={el}
                 className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
                 height="400"

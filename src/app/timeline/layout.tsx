@@ -1,11 +1,4 @@
 import type { Metadata } from "next";
-import { Orbitron } from "next/font/google";
-import "../globals.css";
-
-const orbitron = Orbitron({
-  subsets: ["latin"],
-  weight: ["700", "900"],
-});
 
 export const metadata: Metadata = {
   title: "Timeline | Rise of the Rejects",
@@ -17,7 +10,7 @@ export const metadata: Metadata = {
       "Dive into the key moments that defined the struggle between Uppers, Lowers, and Rejects.",
     images: [
       {
-        url: "/assets/og-timeline.jpg",
+        url: "/assets/og-timeline.png",
         width: 1200,
         height: 630,
         alt: "ROTR Timeline of Events",
