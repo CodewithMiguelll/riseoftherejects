@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "Rise Of The Rejects",
     description:
       "A rebellion forged in the shadows — the official fanbase of Rise of the Rejects.",
-    url: "",
+    url: "https://riseoftherejects.vercel.app",
     siteName: "Rise Of The Rejects",
     images: [
       {
