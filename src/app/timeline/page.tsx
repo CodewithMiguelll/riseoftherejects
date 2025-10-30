@@ -100,11 +100,11 @@ const data = [
             className="h-20 w-full rounded-lg object-cover shadow-md md:h-44 lg:h-full sepia"
           />
           <Image
-            src="/images/matthew-spiteri-jkvO5kSh7yI-unsplash.jpg"
+            src="/images/florian-olivo-r6KrYpCEAOU-unsplash.jpg"
             alt="Political rally"
             width={500}
             height={500}
-            className="h-20 w-full rounded-lg object-cover shadow-md md:h-44 lg:h-full"
+            className="h-20 w-full rounded-lg object-cover shadow-md md:h-44 lg:h-full saturate-0"
           />
         </div>
       </div>

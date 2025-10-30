@@ -50,9 +50,8 @@ export const metadata: Metadata = {
     description:
       "Join the rebellion. Discover the world of ROTR — where hope rises from the ashes.",
     images: ["/assets/og-image-default.jpg"],
-    creator: "@MiguelCreates",
   },
-  metadataBase: new URL("https://riseoftherejects.com"),
+  metadataBase: new URL("https://riseoftherejects.vercel.app"),
 };
 
 // --- ROOT LAYOUT ---
