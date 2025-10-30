@@ -5,8 +5,23 @@ import { motion } from "framer-motion";
 export default function CustomCursor() {
   const [pos, setPos] = useState({ x: 0, y: 0 });
   const [hovering, setHovering] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // Detect mobile or touch-enabled devices
+    const checkMobile = () => {
+      const mobile =
+        window.innerWidth < 768 ||
+        "ontouchstart" in window ||
+        navigator.maxTouchPoints > 0;
+      setIsMobile(mobile);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    if (isMobile) return; // Prevents cursor on mobile devices
+
     const moveHandler = (e: MouseEvent) => {
       setPos({ x: e.clientX, y: e.clientY });
     };
@@ -28,8 +43,11 @@ export default function CustomCursor() {
         el.removeEventListener("mouseleave", leave);
       });
       window.removeEventListener("mousemove", moveHandler);
+      window.removeEventListener("resize", checkMobile);
     };
-  }, []);
+  }, [isMobile]);
+
+  if (isMobile) return null;
 
   return (
     <>
