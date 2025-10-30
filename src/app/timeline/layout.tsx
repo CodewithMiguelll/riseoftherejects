@@ -1,7 +1,29 @@
-export const metadata = {
+import type { Metadata } from "next";
+import { Orbitron } from "next/font/google";
+import "../globals.css";
+
+const orbitron = Orbitron({
+  subsets: ["latin"],
+  weight: ["700", "900"],
+});
+
+export const metadata: Metadata = {
   title: "Timeline | Rise of the Rejects",
   description:
-    "Explore the timeline of events that shaped the world of ROTR.",
+    "Trace the events that shaped the fractured world of Rise of the Rejects — from the birth of power to the rise of rebellion.",
+  openGraph: {
+    title: "Timeline | Rise of the Rejects",
+    description:
+      "Dive into the key moments that defined the struggle between Uppers, Lowers, and Rejects.",
+    images: [
+      {
+        url: "/assets/og-timeline.jpg",
+        width: 1200,
+        height: 630,
+        alt: "ROTR Timeline of Events",
+      },
+    ],
+  },
 };
 
 export default function TimelineLayout({
@@ -9,5 +31,9 @@ export default function TimelineLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <div>{children}</div>;
+  return (
+    <div>
+      {children}
+    </div>
+  );
 }
