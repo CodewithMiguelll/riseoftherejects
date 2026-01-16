@@ -17,9 +17,15 @@
     "clsx": "^2.1.1",
     "lucide-react": "^0.544.0",
     "motion": "^12.23.22",
+<<<<<<< HEAD
     "next": "16.0.7",
     "react": "19.2.1",
     "react-dom": "19.2.1",
+=======
+    "next": "15.5.9",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+>>>>>>> 6fb23d92a289c06bc702255458317d6d3c419168
     "reactjs-flip-card": "^2.0.3",
     "tailwind-merge": "^3.3.1"
   },
