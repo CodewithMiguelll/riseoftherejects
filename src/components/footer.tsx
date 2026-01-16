@@ -50,7 +50,7 @@ export default function Footer() {
           </Link>
           <Link
             href="/timeline"
-            className="hover:bg-[#c4b6c1] text-[#efebee] hover:text-[#060506] transition cursor-none p-3 rounded-md"
+            className="hover:bg-[#c4b6c1] text-[#efebee] hover:text-[#060506] transition cursor-none p-3 rounded-mkd"
           >
             Timeline
           </Link>

@@ -15,7 +15,7 @@ const sourceSans = Source_Sans_3({
 const socials = [
   {
     name: "Instagram",
-    href: "https://instagram.com/_big.migz",
+    href: "https://instagram.com/chikaimaaa_",
     target: "_blank",
     icon: <Instagram className="w-6 h-6" />,
     color: "hover:text-pink-500",
