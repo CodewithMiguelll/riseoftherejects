@@ -110,7 +110,7 @@ export default function AboutPage() {
       {/* SOCIALS SECTION */}
       <section className="bg-[#0b0b0b] text-white py-20 relative overflow-hidden">
         {/* Subtle glowing background */}
-        <div className="absolute inset-0 bg-gradient-to-t from-purple-900/10 via-transparent to-transparent blur-3xl pointer-events-none" />
+        <div className="absolute inset-0 bg-linear-to-t from-purple-900/10 via-transparent to-transparent blur-3xl pointer-events-none" />
 
         <div className="relative max-w-4xl mx-auto text-center">
           <motion.h2
