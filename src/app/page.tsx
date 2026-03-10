@@ -1,31 +1,11 @@
 "use client";
 import Link from "next/link";
-import { Orbitron, Barlow_Condensed, Source_Sans_3 } from "next/font/google";
 import { FocusCards } from "@/components/ui/focus-cards";
 import ReactFlipCard from "reactjs-flip-card";
 import { ParallaxScroll } from "@/components/ui/parallax-scroll";
+import BlurText from "@/components/BlurText";
+
 import Image from "next/image";
-
-// Font configurations
-
-// Heading Font
-const orbitron = Orbitron({
-  subsets: ["latin"],
-  weight: ["400", "500", "700", "900"],
-});
-
-
-// Subheading Font
-const barlow = Barlow_Condensed({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
-
-// Body Font
-const sourceSans = Source_Sans_3({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
 
 const spotlightCharacters = [
   {
@@ -101,37 +81,26 @@ export default function Home() {
       {/* HERO SECTION */}
       <section className="py-24 md:py-36 px-5 text-center">
         <div className="flex flex-col items-center justify-center">
-          <h1
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            className={`${orbitron.className} text-2xl md:text-7xl font-bold`}
-          >
-            In a nation divided, rebellion ignites.
-          </h1>
-          <p
-            data-aos="fade-up"
-            data-aos-duration="1300"
-            className={`${sourceSans.className} text-lg md:text-xl mt-2.5 font-medium text-pretty`}
-          >
+          <BlurText
+            text="In a nation divided, rebellion ignites."
+            delay={100}
+            animateBy="words"
+            direction="top"
+            className="text-4xl md:text-6xl font-bold font-family-heading"
+          />
+
+          <p className="text-lg md:text-xl font-medium text-pretty font-body mt-5">
             The Uppers rule, The Lowers endure... but the Rejects refuse to
             kneel.
           </p>
           <div className="flex flex-row items-center justify-center gap-4.5 mt-5">
             <Link href="/characters">
-              <button
-                data-aos="fade-up"
-                data-aos-duration="1400"
-                className="transition-all bg-[#c4b6c1] hover:bg-[#c4b6c1cc] text-[#060506] p-4 rounded-md hover:-translate-y-1 cursor-none"
-              >
+              <button className="transition-all bg-[#c4b6c1] hover:bg-[#c4b6c1cc] text-[#060506] p-4 rounded-md hover:-translate-y-1 cursor-none">
                 Meet The Characters
               </button>
             </Link>
             <Link href="/factions">
-              <button
-                data-aos="fade-up"
-                data-aos-duration="1500"
-                className="transition-all bg-[#5d4b51] hover:bg-[#5d4b51cc] p-4 rounded-md hover:-translate-y-1 cursor-none"
-              >
+              <button className="transition-all bg-[#5d4b51] hover:bg-[#5d4b51cc] p-4 rounded-md hover:-translate-y-1 cursor-none">
                 Pick A Side
               </button>
             </Link>
@@ -141,14 +110,10 @@ export default function Home() {
 
       {/* FACTIONS SECTION */}
       <section className=" md:py-10 px-4">
-        <h1
-          className={`${barlow.className} text-2xl md:text-5xl text-center font-bold`}
-        >
+        <h1 className="text-2xl md:text-5xl text-center font-bold font-heading">
           The Republic is divided... which side are you on?
         </h1>
-        <p
-          className={`${sourceSans.className} text-sm md:text-base text-center font-medium text-pretty mt-3.5`}
-        >
+        <p className="text-sm md:text-base text-center font-medium text-pretty mt-3.5 font-body">
           Choose wisely. Your fate depends on it.
         </p>
         <div className="mt-10 mb-12">
@@ -166,11 +131,11 @@ export default function Home() {
       {/* BLOCKQUOTE */}
       <section className="py-16 px-6 ">
         <blockquote className="max-w-3xl mx-auto text-center">
-          <p className="text-2xl md:text-4xl font-semibold leading-snug">
-            “We can&apos;t just sit and take it like good little boys, if not now,
-            then when?”
+          <p className="text-2xl md:text-4xl font-semibold leading-snug font-body">
+            "We can't just sit and take it like good little boys, if not now,
+            then when?"
           </p>
-          <footer className="mt-4 text-sm text-[#e5e7e8] font-medium">
+          <footer className="mt-4 text-sm text-[#e5e7e8] font-medium font-body">
             — Omajiri Spokesperson
           </footer>
         </blockquote>
@@ -178,12 +143,10 @@ export default function Home() {
 
       {/* CHARACTERS SPOTLIGHT */}
       <section className="py-10 px-4">
-        <h1
-          className={`${barlow.className} text-2xl md:text-5xl text-center font-bold`}
-        >
+        <h1 className="text-2xl md:text-5xl text-center font-bold font-heading">
           Faces Of The Rebellion
         </h1>
-        <p className="text-sm md:text-base text-center font-medium text-pretty mt-3.5">
+        <p className="text-sm md:text-base text-center font-medium text-pretty mt-3.5 font-body">
           Meet the souls defying the order.
         </p>
         <div className="mt-10 mb-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
@@ -220,8 +183,10 @@ export default function Home() {
                 }}
                 frontComponent={
                   <div className="text-center">
-                    <h2 className="text-xl font-bold mb-2">{char.name}</h2>
-                    <p className="text-sm opacity-80">{char.blurb}</p>
+                    <h2 className="text-xl font-bold mb-2 font-heading">
+                      {char.name}
+                    </h2>
+                    <p className="text-sm opacity-80 font-body">{char.blurb}</p>
                   </div>
                 }
                 backComponent={
@@ -248,9 +213,7 @@ export default function Home() {
 
       {/* TIMELINE SECTION */}
       <section className="py-16 px-6">
-        <h2
-          className={`${barlow.className} text-2xl md:text-5xl text-center font-bold`}
-        >
+        <h2 className="text-2xl md:text-5xl text-center font-bold font-heading">
           A History Written in Ashes
         </h2>
         <div className="max-w-3xl mx-auto mt-5">
@@ -258,14 +221,14 @@ export default function Home() {
             {/* Event 1 */}
             <li className="mb-10 ml-6">
               <div className="absolute w-3 h-3 bg-[#121212] rounded-full -left-1.5 border border-white"></div>
-              <time className="mb-1 text-sm font-normal leading-none text-[#e5e7e8]">
+              <time className="mb-1 text-sm font-normal leading-none text-[#e5e7e8] font-body">
                 October 2nd, 2045
               </time>
-              <h3 className="text-lg font-semibold text-[#e5e7e8]">
+              <h3 className="text-lg font-semibold text-[#e5e7e8] font-subheading">
                 SERUM I-960 is launched, first Nigerians with superpowers
                 emerge.
               </h3>
-              <p className="text-base font-normal text-[#e5e7e8]">
+              <p className="text-base font-normal text-[#e5e7e8] font-body">
                 The first Nigerians awaken extraordinary abilities. For a
                 fleeting moment, hope blooms — before power is claimed by those
                 who would cage it.
@@ -275,13 +238,13 @@ export default function Home() {
             {/* Event 2 */}
             <li className="mb-10 ml-6">
               <div className="absolute w-3 h-3 rounded-full -left-1.5 border border-white"></div>
-              <time className="mb-1 text-sm font-normal leading-none text-[#e5e7e8]">
+              <time className="mb-1 text-sm font-normal leading-none text-[#e5e7e8] font-body">
                 May 7th, 2065
               </time>
-              <h3 className="text-lg font-semibold text-[#e5e7e8]">
+              <h3 className="text-lg font-semibold text-[#e5e7e8] font-subheading">
                 The Great War
               </h3>
-              <p className="text-base font-normal text-[#e5e7e8]">
+              <p className="text-base font-normal text-[#e5e7e8] font-body">
                 A nation splinters under the weight of fear and ambition. Cities
                 burn, alliances fracture, and the dream of equality is buried
                 beneath rubble.
@@ -291,13 +254,13 @@ export default function Home() {
             {/* Event 3 */}
             <li className="mb-10 ml-6">
               <div className="absolute w-3 h-3 bg-[#121212] rounded-full -left-1.5 border border-white"></div>
-              <time className="mb-1 text-sm font-normal leading-none text-[#e5e7e8]">
+              <time className="mb-1 text-sm font-normal leading-none text-[#e5e7e8] font-body">
                 Recently
               </time>
-              <h3 className="text-lg font-semibold text-[#e5e7e8]">
+              <h3 className="text-lg font-semibold text-[#e5e7e8] font-subheading">
                 The Republic Of Order
               </h3>
-              <p className="text-base font-normal text-[#e5e7e8]">
+              <p className="text-base font-normal text-[#e5e7e8] font-body">
                 The Uppers tighten their grip — Nullisyn protocols, border
                 dampeners, surveillance everywhere. Yet in the shadows, the
                 whispers of rebellion refuse to die.
@@ -317,14 +280,10 @@ export default function Home() {
 
       {/* PARALLAX SECTION */}
       <section className="py-24 md:py-36 px-5 text-[#e5e7e8]">
-        <h1
-          className={`${barlow.className} text-2xl md:text-5xl text-center font-bold`}
-        >
+        <h1 className="text-2xl md:text-5xl text-center font-bold">
           Step Into The Republic
         </h1>
-        <p
-          className={`${sourceSans.className} text-lg md:text-xl mt-2.5 font-medium text-pretty text-center`}
-        >
+        <p className="text-lg md:text-xl mt-2.5 font-medium text-pretty text-center">
           The Uppers built walls and checkpoints, but every barrier tells a
           story. This is the Republic they claim. Will you accept it?
         </p>
@@ -335,14 +294,10 @@ export default function Home() {
 
       {/* FOOTER CTA */}
       <section className="py-10 px-4 text-center bg-[#998185] text-[#e5e7e8] rounded-lg mx-4 md:mx-20 mb-10">
-        <h2
-          className={`${barlow.className} text-2xl md:text-4xl font-bold mb-4 text-white`}
-        >
+        <h2 className="text-2xl md:text-4xl font-bold mb-4 text-white">
           This Is Just The Beginning
         </h2>
-        <p
-          className={`${sourceSans.className} mb-8 text-xs font-normal text-[#e5e7e8] md:text-lg`}
-        >
+        <p className="mb-8 text-xs font-normal text-[#e5e7e8] md:text-lg">
           The story of the Rejects is still being written. Step inside, and be
           part of the legend.
         </p>
@@ -355,7 +310,8 @@ export default function Home() {
 
           <Link
             href={"https://stage32.com/miguelwrites"}
-            target="_blank" rel="noopener noreferrer"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <button className="bg-[#5d4b51] hover:bg-[#5d4b51cc] cursor-none text-[#efebee] font-bold py-3 px-6 rounded transition-all">
               Follow The Author
