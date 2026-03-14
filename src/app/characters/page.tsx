@@ -22,16 +22,16 @@ export default function CharactersPage() {
   const [faction, setFaction] = useState<"rejects" | "uppers">("rejects");
 
   return (
-    <section className="min-h-screen px-6 py-16 md:px-12 text-center text-white">
+    <section className="min-h-screen px-6 py-16 md:px-12 text-center">
       {/* Header */}
       <div className="max-w-3xl mx-auto">
         <h1
-          className={`${orbitron.className} text-4xl md:text-6xl font-extrabold`}
+          className={`${orbitron.className} text-4xl md:text-6xl font-extrabold text-[#060506]`}
         >
           Mavericks Of The State
         </h1>
         <p
-          className={`${sourceSans.className} text-lg md:text-xl mt-4 text-gray-300`}
+          className={`${sourceSans.className} text-lg md:text-xl mt-4 text-[#060506]`}
         >
           Meet the defiant Rejects and the authoritarian Uppers — caught in a
           world divided by power and rebellion.
@@ -54,7 +54,7 @@ export default function CharactersPage() {
               ${
                 faction === key
                   ? "border-purple-500 text-purple-400"
-                  : "border-transparent text-gray-500 hover:text-white"
+                  : "border-transparent text-gray-500 hover:text-gray-700"
               }
             `}
           >
@@ -64,7 +64,7 @@ export default function CharactersPage() {
       </nav>
 
       {/* Faction Label */}
-      <div className="mt-6 text-sm uppercase tracking-widest text-gray-400">
+      <div className="mt-6 text-sm uppercase tracking-widest text-gray-700">
         Currently viewing:{" "}
         <span className="text-purple-400 font-semibold">{faction}</span>
       </div>

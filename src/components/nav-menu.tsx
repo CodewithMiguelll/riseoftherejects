@@ -58,7 +58,7 @@ const Navigation = () => {
         {/* Brand */}
         <div className="text-3xl md:text-4xl">
           <Link href="/" className="relative group block">
-            <span className={`${rubik_glitch.className} text-[#060506]`}>ROTR</span>
+            <span className={`${rubik_glitch.className} text-[#060506] cursor-none`}>ROTR</span>
           </Link>
         </div>
 
@@ -70,7 +70,7 @@ const Navigation = () => {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`relative px-2 py-1 transition-colors duration-300 text-lg tracking-wide ${
+                className={`relative px-2 py-1 transition-colors duration-300 text-lg tracking-wide cursor-none ${
                   isActive ? "text-[#060606]" : "border-b-[#060506]"
                 }`}
               >
@@ -79,7 +79,7 @@ const Navigation = () => {
                 {isActive && (
                   <motion.div
                     layoutId="navbar-indicator"
-                    className="absolute left-0 -bottom-1 h-0.5 w-full bg-purple-900 rounded-full shadow-[0_0_8px_rgba(255,44,85,0.6)]"
+                    className="absolute left-0 -bottom-1 h-0.5 w-full bg-purple-900 rounded-full"
                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                   />
                 )}
