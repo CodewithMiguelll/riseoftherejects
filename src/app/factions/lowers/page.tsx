@@ -22,7 +22,7 @@ export default function LowersPage() {
           The Lowers
         </h1>
         <p
-          className={`${sourceSans.className} text-gray-300 text-lg md:text-xl mt-4 max-w-3xl mx-auto`}
+          className={`${sourceSans.className}  text-lg md:text-xl mt-4 max-w-3xl mx-auto`}
         >
           They build the walls. They fuel the cities. They bear the weight of a
           world that pretends they don’t exist. The Lowers are the backbone of
@@ -63,7 +63,7 @@ export default function LowersPage() {
             The Hands That Build
           </h2>
           <p
-            className={`${sourceSans.className} text-gray-300 text-lg leading-relaxed`}
+            className={`${sourceSans.className}  text-lg leading-relaxed`}
           >
             Beneath the Upper towers, the Lowers work — endlessly. They are the
             makers, the laborers, the dreamers who still whisper of a fairer

@@ -22,7 +22,7 @@ export default function UppersPage() {
           The Uppers
         </h1>
         <p
-          className={`${sourceSans.className} text-gray-700 text-lg md:text-xl mt-4 max-w-3xl mx-auto`}
+          className={`${sourceSans.className} text-lg md:text-xl mt-4 max-w-3xl mx-auto`}
         >
           The architects of order. The crowned elite. From their pristine
           towers, they govern with precision, believing perfection must come —
@@ -63,7 +63,7 @@ export default function UppersPage() {
             Masters of Order
           </h2>
           <p
-            className={`${sourceSans.className} text-gray-700 text-lg leading-relaxed`}
+            className={`${sourceSans.className} text-lg leading-relaxed`}
           >
             To the Uppers, chaos is a disease — and they are the cure. Their
             world gleams with sterile perfection, where every shadow is
