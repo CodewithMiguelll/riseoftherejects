@@ -95,7 +95,7 @@ const Footer = () => {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-purple-400 transition-colors duration-300 text-sm"
+                    className="text-gray-400 hover:text-purple-400 transition-colors duration-300 text-sm cursor-none"
                   >
                     {link.label}
                   </Link>
@@ -116,7 +116,7 @@ const Footer = () => {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-purple-400 transition-colors duration-300 text-sm flex items-center gap-2"
+                    className="text-gray-400 hover:text-purple-400 transition-colors duration-300 text-sm flex items-center gap-2 cursor-none"
                   >
                     {link.icon}
                     {link.name}
@@ -137,7 +137,7 @@ const Footer = () => {
                   href="https://www.wattpad.com/story/407399764?utm_source=android&utm_medium=link&utm_content=share_writing&wp_page=create&wp_uname=Chikaimaaa_"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-purple-400 transition-colors duration-300 text-sm"
+                  className="text-gray-400 hover:text-purple-400 transition-colors duration-300 text-sm cursor-none"
                 >
                   On Wattpad
                 </a>
