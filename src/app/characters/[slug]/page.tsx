@@ -38,7 +38,7 @@ export default async function CharacterPage({ params }: CharacterPageProps) {
 
         <div className="flex-1 text-left">
           <h1
-            className={`${orbitron.className} text-4xl md:text-6xl font-bold`}
+            className={`${orbitron.className} text-4xl md:text-6xl font-bold text-[#060506]`}
           >
             {character.name}
           </h1>
@@ -49,13 +49,13 @@ export default async function CharacterPage({ params }: CharacterPageProps) {
           </h2>
 
           <p
-            className={`${sourceSans.className} text-gray-300 text-lg mt-6 leading-relaxed`}
+            className={`${sourceSans.className} text-[#060506] text-lg mt-6 leading-relaxed`}
           >
             {character.description ||
               "No detailed description available yet. (But you know they’re awesome.)"}
           </p>
 
-          <p className={`${sourceSans.className} text-purple-300 text-xl mt-6`}>
+          <p className={`${sourceSans.className} text-purple-500 text-xl mt-6`}>
             <strong>Power:</strong> {character.power}
           </p>
         </div>

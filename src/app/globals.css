@@ -1,12 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-body{
-  cursor: none;
-  background-color: #060506;
-  color: #E5E7EB;
-}
-
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -47,6 +41,12 @@ body{
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+}
+
+@theme {
+  --font-family-heading: var(--font-orbitron), system-ui, serif;
+  --font-family-subheading: var(--font-barlow), sans-serif;
+  --font-family-body: var(--font-source-sans), sans-serif;
 }
 
 :root {
@@ -126,4 +126,3 @@ body{
     @apply bg-background text-foreground;
   }
 }
-

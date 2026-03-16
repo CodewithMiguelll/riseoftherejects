@@ -1,47 +1,27 @@
 "use client";
 import Link from "next/link";
-import { Orbitron, Barlow_Condensed, Source_Sans_3 } from "next/font/google";
 import { FocusCards } from "@/components/ui/focus-cards";
-import ReactFlipCard from "reactjs-flip-card";
 import { ParallaxScroll } from "@/components/ui/parallax-scroll";
+import BlurText from "@/components/BlurText";
+import { motion } from "motion/react";
+
 import Image from "next/image";
-
-// Font configurations
-
-// Heading Font
-const orbitron = Orbitron({
-  subsets: ["latin"],
-  weight: ["400", "500", "700", "900"],
-});
-
-
-// Subheading Font
-const barlow = Barlow_Condensed({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
-
-// Body Font
-const sourceSans = Source_Sans_3({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
 
 const spotlightCharacters = [
   {
-    name: "Michael",
-    blurb: "The reluctant leader, scarred by loss but driven by hope.",
-    poster: "/images/michael-poster.png",
+    title: "Michael",
+    description: "The reluctant leader, scarred by loss but driven by hope.",
+    src: "/images/michael-poster.png",
   },
   {
-    name: "Ben",
-    blurb: "A powerhouse with strength that mirrors his loyalty.",
-    poster: "/images/ben-poster.png",
+    title: "Ben",
+    description: "A powerhouse with strength that mirrors his loyalty.",
+    src: "/images/ben-poster.png",
   },
   {
-    name: "Cynthia",
-    blurb: "The spark of rebellion, lightning in both word and deed.",
-    poster: "/images/cynthia-poster.png",
+    title: "Cynthia",
+    description: "The spark of rebellion, lightning in both word and deed.",
+    src: "/images/cynthia-poster.png",
   },
 ];
 
@@ -101,37 +81,26 @@ export default function Home() {
       {/* HERO SECTION */}
       <section className="py-24 md:py-36 px-5 text-center">
         <div className="flex flex-col items-center justify-center">
-          <h1
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            className={`${orbitron.className} text-2xl md:text-7xl font-bold`}
-          >
-            In a nation divided, rebellion ignites.
-          </h1>
-          <p
-            data-aos="fade-up"
-            data-aos-duration="1300"
-            className={`${sourceSans.className} text-lg md:text-xl mt-2.5 font-medium text-pretty`}
-          >
+          <BlurText
+            text="In a nation divided, rebellion ignites."
+            delay={100}
+            animateBy="words"
+            direction="top"
+            className="text-4xl md:text-6xl font-bold font-family-heading"
+          />
+
+          <p className="text-lg md:text-xl font-medium text-pretty font-family-body mt-5">
             The Uppers rule, The Lowers endure... but the Rejects refuse to
             kneel.
           </p>
           <div className="flex flex-row items-center justify-center gap-4.5 mt-5">
             <Link href="/characters">
-              <button
-                data-aos="fade-up"
-                data-aos-duration="1400"
-                className="transition-all bg-[#c4b6c1] hover:bg-[#c4b6c1cc] text-[#060506] p-4 rounded-md hover:-translate-y-1 cursor-none"
-              >
+              <button className="transition-all bg-[#6008b3] hover:bg-[#6008b3c7] text-[#ebeef1] p-4 rounded-md hover:-translate-y-1 cursor-none font-family-body">
                 Meet The Characters
               </button>
             </Link>
             <Link href="/factions">
-              <button
-                data-aos="fade-up"
-                data-aos-duration="1500"
-                className="transition-all bg-[#5d4b51] hover:bg-[#5d4b51cc] p-4 rounded-md hover:-translate-y-1 cursor-none"
-              >
+              <button className="transition-all bg-[#060506] hover:bg-[#060506c7] text-[#ebeef1] p-4 rounded-md hover:-translate-y-1 cursor-none font-family-body">
                 Pick A Side
               </button>
             </Link>
@@ -141,14 +110,10 @@ export default function Home() {
 
       {/* FACTIONS SECTION */}
       <section className=" md:py-10 px-4">
-        <h1
-          className={`${barlow.className} text-2xl md:text-5xl text-center font-bold`}
-        >
+        <h1 className="text-2xl md:text-5xl font-family-subheading text-center font-bold font-heading">
           The Republic is divided... which side are you on?
         </h1>
-        <p
-          className={`${sourceSans.className} text-sm md:text-base text-center font-medium text-pretty mt-3.5`}
-        >
+        <p className="text-sm md:text-base text-center font-medium font-family-body text-pretty mt-3.5 font-body">
           Choose wisely. Your fate depends on it.
         </p>
         <div className="mt-10 mb-12">
@@ -156,7 +121,7 @@ export default function Home() {
         </div>
         <div className="flex justify-center">
           <Link href="/factions" className="w-full max-w-sm">
-            <button className="w-full bg-[#c4b6c1] hover:bg-[#c4b6c1cc] text-[#060506] font-bold py-3 rounded transition-all duration-100 ease-in-out cursor-none">
+            <button className="w-full bg-[#6008b3] hover:bg-[#6008b3c7] text-[#ebeef1] font-bold py-3 rounded hover:transition-all font-family-body cursor-none">
               Pick A Side
             </button>
           </Link>
@@ -166,11 +131,11 @@ export default function Home() {
       {/* BLOCKQUOTE */}
       <section className="py-16 px-6 ">
         <blockquote className="max-w-3xl mx-auto text-center">
-          <p className="text-2xl md:text-4xl font-semibold leading-snug">
-            “We can&apos;t just sit and take it like good little boys, if not now,
-            then when?”
+          <p className="text-2xl md:text-4xl font-semibold leading-snug font-family-subheading">
+            "We can't just sit and take it like good little boys, if not now,
+            then when?"
           </p>
-          <footer className="mt-4 text-sm text-[#e5e7e8] font-medium">
+          <footer className="mt-4 text-sm text-[#060506] font-medium font-family-body">
             — Omajiri Spokesperson
           </footer>
         </blockquote>
@@ -178,68 +143,18 @@ export default function Home() {
 
       {/* CHARACTERS SPOTLIGHT */}
       <section className="py-10 px-4">
-        <h1
-          className={`${barlow.className} text-2xl md:text-5xl text-center font-bold`}
-        >
+        <h1 className="text-2xl md:text-5xl text-center font-bold font-family-subheading">
           Faces Of The Rebellion
         </h1>
-        <p className="text-sm md:text-base text-center font-medium text-pretty mt-3.5">
+        <p className="text-sm md:text-base text-center font-medium text-pretty mt-3.5 font-family-body">
           Meet the souls defying the order.
         </p>
-        <div className="mt-10 mb-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-          {spotlightCharacters.map((char, idx) => (
-            <div
-              data-aos="zoom-out"
-              data-aos-duration="1000"
-              key={idx}
-              className="w-72 h-96 mx-auto hover:cursor-none mb-2" // wrapper defines size
-            >
-              <ReactFlipCard
-                flipTrigger="onClick"
-                containerStyle={{
-                  width: "100%",
-                  height: "100%",
-                }}
-                frontStyle={{
-                  borderRadius: "1rem",
-                  padding: "1.5rem",
-                  background: "#998185",
-                  color: "white",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  width: "100%",
-                  height: "100%", // force fill
-                }}
-                backStyle={{
-                  borderRadius: "1rem",
-                  overflow: "hidden",
-                  width: "100%",
-                  height: "100%", // force fill
-                }}
-                frontComponent={
-                  <div className="text-center">
-                    <h2 className="text-xl font-bold mb-2">{char.name}</h2>
-                    <p className="text-sm opacity-80">{char.blurb}</p>
-                  </div>
-                }
-                backComponent={
-                  <Image
-                    src={char.poster}
-                    alt={`${char.name} Poster`}
-                    width={288}
-                    height={384}
-                    className="w-full h-full object-cover rounded-xl"
-                  />
-                }
-              />
-            </div>
-          ))}
+        <div className="mt-10 mb-12">
+          <FocusCards cards={spotlightCharacters} />
         </div>
         <div className="flex justify-center items-center text-center">
           <Link href="/characters" className="w-full max-w-sm">
-            <button className="w-full bg-[#c4b6c1] hover:bg-[#c4b6c1cc] text-[#060506] font-bold py-3 rounded transition-all duration-100 ease-in-out cursor-none">
+            <button className="w-full bg-[#6008b3] hover:bg-[#6008b3c7] text-[#ebeef1] font-bold py-3 rounded transition-all duration-100 ease-in-out cursor-none">
               Meet The Characters
             </button>
           </Link>
@@ -248,24 +163,22 @@ export default function Home() {
 
       {/* TIMELINE SECTION */}
       <section className="py-16 px-6">
-        <h2
-          className={`${barlow.className} text-2xl md:text-5xl text-center font-bold`}
-        >
+        <h2 className="text-2xl md:text-5xl text-center font-bold font-family-subheading">
           A History Written in Ashes
         </h2>
-        <div className="max-w-3xl mx-auto mt-5">
+        <div className="max-w-3xl mx-auto mt-5 text-[#060506]">
           <ol className="relative border-l border-[#998185]">
             {/* Event 1 */}
             <li className="mb-10 ml-6">
               <div className="absolute w-3 h-3 bg-[#121212] rounded-full -left-1.5 border border-white"></div>
-              <time className="mb-1 text-sm font-normal leading-none text-[#e5e7e8]">
+              <time className="mb-1 text-sm font-normal leading-none font-family-body">
                 October 2nd, 2045
               </time>
-              <h3 className="text-lg font-semibold text-[#e5e7e8]">
+              <h3 className="text-lg font-semibold font-family-subheading">
                 SERUM I-960 is launched, first Nigerians with superpowers
                 emerge.
               </h3>
-              <p className="text-base font-normal text-[#e5e7e8]">
+              <p className="text-base font-normal font-family-body">
                 The first Nigerians awaken extraordinary abilities. For a
                 fleeting moment, hope blooms — before power is claimed by those
                 who would cage it.
@@ -275,13 +188,13 @@ export default function Home() {
             {/* Event 2 */}
             <li className="mb-10 ml-6">
               <div className="absolute w-3 h-3 rounded-full -left-1.5 border border-white"></div>
-              <time className="mb-1 text-sm font-normal leading-none text-[#e5e7e8]">
+              <time className="mb-1 text-sm font-normal leading-none font-family-body">
                 May 7th, 2065
               </time>
-              <h3 className="text-lg font-semibold text-[#e5e7e8]">
+              <h3 className="text-lg font-semibold font-family-subheading">
                 The Great War
               </h3>
-              <p className="text-base font-normal text-[#e5e7e8]">
+              <p className="text-base font-normal font-family-body">
                 A nation splinters under the weight of fear and ambition. Cities
                 burn, alliances fracture, and the dream of equality is buried
                 beneath rubble.
@@ -291,13 +204,13 @@ export default function Home() {
             {/* Event 3 */}
             <li className="mb-10 ml-6">
               <div className="absolute w-3 h-3 bg-[#121212] rounded-full -left-1.5 border border-white"></div>
-              <time className="mb-1 text-sm font-normal leading-none text-[#e5e7e8]">
+              <time className="mb-1 text-sm font-normal leading-none font-family-body">
                 Recently
               </time>
-              <h3 className="text-lg font-semibold text-[#e5e7e8]">
+              <h3 className="text-lg font-semibold font-family-subheading">
                 The Republic Of Order
               </h3>
-              <p className="text-base font-normal text-[#e5e7e8]">
+              <p className="text-base font-normal font-family-body">
                 The Uppers tighten their grip — Nullisyn protocols, border
                 dampeners, surveillance everywhere. Yet in the shadows, the
                 whispers of rebellion refuse to die.
@@ -308,7 +221,7 @@ export default function Home() {
         <div className="text-center mt-8">
           <Link
             href="/timeline"
-            className="inline-block cursor-none bg-[#c4b6c1] hover:bg-[#c4b6c1cc] text-[#060506] font-bold py-3 px-6 rounded transition-all duration-150 ease-in-out"
+            className="inline-block cursor-none bg-[#6008b3] hover:bg-[#6008b3c7] text-[#ebeef1] font-bold py-3 px-6 rounded transition-all duration-150 ease-in-out"
           >
             Explore the Full Timeline
           </Link>
@@ -317,14 +230,10 @@ export default function Home() {
 
       {/* PARALLAX SECTION */}
       <section className="py-24 md:py-36 px-5 text-[#e5e7e8]">
-        <h1
-          className={`${barlow.className} text-2xl md:text-5xl text-center font-bold`}
-        >
+        <h1 className="text-2xl md:text-5xl text-center font-bold text-[#060506] font-family-subheading">
           Step Into The Republic
         </h1>
-        <p
-          className={`${sourceSans.className} text-lg md:text-xl mt-2.5 font-medium text-pretty text-center`}
-        >
+        <p className="text-lg md:text-xl mt-2.5 font-medium text-pretty text-center font-family-body text-[#060506]">
           The Uppers built walls and checkpoints, but every barrier tells a
           story. This is the Republic they claim. Will you accept it?
         </p>
@@ -334,33 +243,80 @@ export default function Home() {
       </section>
 
       {/* FOOTER CTA */}
-      <section className="py-10 px-4 text-center bg-[#998185] text-[#e5e7e8] rounded-lg mx-4 md:mx-20 mb-10">
-        <h2
-          className={`${barlow.className} text-2xl md:text-4xl font-bold mb-4 text-white`}
-        >
-          This Is Just The Beginning
-        </h2>
-        <p
-          className={`${sourceSans.className} mb-8 text-xs font-normal text-[#e5e7e8] md:text-lg`}
-        >
-          The story of the Rejects is still being written. Step inside, and be
-          part of the legend.
-        </p>
-        <div className="flex justify-center items-center text-center gap-3.5">
-          <Link href="/characters">
-            <button className="bg-[#c4b6c1] hover:bg-[#c4b6c1cc] text-[#060506] cursor-none font-bold py-3 px-6 rounded transition-all">
-              Meet The Characters
-            </button>
-          </Link>
+      <section className="py-16 md:py-24 px-4 relative overflow-hidden mb-10">
+        {/* Background elements */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#998185]/20 via-[#5d4b51]/20 to-[#998185]/20 rounded-xl"></div>
+        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-600/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
 
-          <Link
-            href={"https://stage32.com/miguelwrites"}
-            target="_blank" rel="noopener noreferrer"
+        <div className="relative max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
           >
-            <button className="bg-[#5d4b51] hover:bg-[#5d4b51cc] cursor-none text-[#efebee] font-bold py-3 px-6 rounded transition-all">
-              Follow The Author
-            </button>
-          </Link>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-[#ebeef1] font-family-subheading">
+              This Is Just The Beginning
+            </h2>
+          </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1, duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mb-12 text-base md:text-lg text-[#e5e7e8] font-family-body leading-relaxed"
+          >
+            The story of the Rejects is still being written. Step inside, become
+            part of the
+            <span className="text-purple-600 font-semibold"> rebellion</span>,
+            and discover a world where hope fights back.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            viewport={{ once: true }}
+            className="flex flex-col sm:flex-row justify-center items-center gap-4 md:gap-6"
+          >
+            <Link
+              href="https://www.wattpad.com/story/407399764?utm_source=android&utm_medium=link&utm_content=share_writing&wp_page=create&wp_uname=Chikaimaaa_"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto"
+            >
+              <motion.button
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 20px 25px -5px rgba(168, 85, 247, 0.3)",
+                }}
+                whileTap={{ scale: 0.95 }}
+                className="w-full bg-[#6008b3] hover:bg-[#6008b3c7] text-[#ebeef1] font-bold py-3 px-8 rounded-lg transition-all duration-300 cursor-none font-family-body text-lg"
+              >
+                Read the Book
+              </motion.button>
+            </Link>
+
+            <Link
+              href={"https://stage32.com/miguelwrites"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto"
+            >
+              <motion.button
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 20px 25px -5px rgba(168, 85, 247, 0.2)",
+                }}
+                whileTap={{ scale: 0.95 }}
+                className="w-full bg-[#060506] text-[#ebeef1] font-bold py-3 px-8 rounded-lg transition-all duration-300 cursor-none font-family-body text-lg border border-[#6d5b61]/50"
+              >
+                Follow The Author
+              </motion.button>
+            </Link>
+          </motion.div>
         </div>
       </section>
     </>

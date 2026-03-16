@@ -33,7 +33,7 @@ export default function CharactersLayout({
 }) {
   return (
     <div
-      className={`min-h-screen bg-[#0a0a0a] text-white px-6 md:px-12 py-20 ${orbitron.className}`}
+      className={`min-h-screen text-white px-6 md:px-12 py-20 ${orbitron.className}`}
     >
       <div className="max-w-7xl mx-auto">{children}</div>
     </div>

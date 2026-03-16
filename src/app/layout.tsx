@@ -1,18 +1,31 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import "aos/dist/aos.css";
-import AOSInit from "@/components/AOSInit";
-import Header from "@/components/header";
+import Navbar from "@/components/nav-menu";
 import Footer from "@/components/footer";
 import CustomCursor from "@/components/custom-cursor";
-import { Orbitron } from "next/font/google";
+import { Orbitron, Barlow_Condensed, Source_Sans_3 } from "next/font/google";
 
-// --- FONT CONFIGURATION ---
+// Font configurations
+
+// Heading Font
 const orbitron = Orbitron({
   subsets: ["latin"],
-  weight: ["400", "700", "900"],
+  weight: ["400", "500", "700", "900"],
   variable: "--font-orbitron",
-  display: "swap",
+});
+
+// Subheading Font
+const barlow = Barlow_Condensed({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-barlow",
+});
+
+// Body Font
+const sourceSans = Source_Sans_3({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-source-sans",
 });
 
 // --- SITE METADATA ---
@@ -61,24 +74,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={orbitron.variable}>
-      <body
-        className={`antialiased bg-[#0b0b0b] text-white relative overflow-x-hidden`}
-      >
-        <AOSInit />
-        <Header />
+    <html
+      lang="en"
+      className={`${orbitron.variable} ${barlow.variable} ${sourceSans.variable}`}
+    >
+      <body className="antialiased bg-[#ebeef1] text-[#060506] relative overflow-x-hidden cursor-none">
+        <Navbar />
         <main id="main-content" className="min-h-screen">
           {/* Error boundary pattern for smoother hydration */}
           <section suppressHydrationWarning>{children}</section>
         </main>
         <Footer />
-        {/* Cursor Overlay */}
+        {/* Cursor Cursor */}
         <CustomCursor />
-        {/* Global decorative gradient */}
-        <div
-          aria-hidden="true"
-          className="fixed inset-0 pointer-events-none bg-gradient-to-b from-transparent via-transparent to-[#160024]/40"
-        />
       </body>
     </html>
   );

@@ -4,6 +4,7 @@ import { Orbitron, Barlow_Condensed, Source_Sans_3 } from "next/font/google";
 import Image from "next/image";
 import { Instagram, Globe } from "lucide-react";
 import { motion } from "motion/react";
+import { IconBrandX } from "@tabler/icons-react";
 
 const orbitron = Orbitron({ subsets: ["latin"], weight: ["700", "900"] });
 const barlow = Barlow_Condensed({ subsets: ["latin"], weight: ["400", "600"] });
@@ -27,12 +28,19 @@ const socials = [
     icon: <Globe className="w-6 h-6" />,
     color: "hover:text-purple-400",
   },
+  {
+    name: "X (Twitter)",
+    href: "https://x.com/Chikaimaaa",
+    target: "_blank",
+    icon: <IconBrandX className="w-6 h-6" />,
+    color: "hover:text-blue-500",
+  },
 ];
 
 export default function AboutPage() {
   return (
     <>
-      <section className="min-h-screen bg-[#0b0b0b] text-white px-6 md:px-12 py-24 space-y-32">
+      <section className="min-h-screen px-6 md:px-12 py-24 space-y-32">
         {/* --- STORY SECTION --- */}
         <div className="max-w-4xl mx-auto text-center">
           <h1
@@ -41,7 +49,7 @@ export default function AboutPage() {
             About <span className="text-purple-500">Rise Of The Rejects</span>
           </h1>
           <p
-            className={`${sourceSans.className} text-lg md:text-xl text-gray-300 leading-relaxed`}
+            className={`${sourceSans.className} text-lg md:text-xl leading-relaxed`}
           >
             Rise of the Rejects is a story born from resistance — a declaration
             that hope still belongs to us, even when the system says it doesn’t,
@@ -68,8 +76,8 @@ export default function AboutPage() {
           <div className="flex justify-center md:justify-start">
             <div className="w-full max-w-sm md:max-w-md overflow-hidden rounded-2xl">
               <Image
-                src="/images/miguel-rotr.jpg"
-                alt="Photo of Miguel — Creator of ROTR"
+                src="/images/chikaima-rotr.jpg"
+                alt="Photo of Chikaima Uwakwe — Creator of ROTR"
                 width={500}
                 height={500}
                 className="rounded-2xl w-full h-auto object-cover border border-purple-600/20 shadow-[0_0_40px_-10px_rgba(168,85,247,0.3)]"
@@ -85,12 +93,11 @@ export default function AboutPage() {
             >
               Meet The Creator
             </h2>
-            <p
-              className={`${sourceSans.className} text-lg text-gray-300 leading-relaxed`}
-            >
-              Hi, I’m <span className="font-bold text-white">Miguel</span> — the
-              writer, designer, and dreamer behind Rise of the Rejects. This
-              project began as more than fiction — it became a mirror, a
+            <p className={`${sourceSans.className} text-lg leading-relaxed`}>
+              Hi, I’m{" "}
+              <span className="font-bold text-purple-500">Chikaima Uwakwe</span>{" "}
+              — the writer, designer, and dreamer behind Rise of the Rejects.
+              This project began as more than fiction — it became a mirror, a
               reminder that hope still has a place in a world that often forgets
               it. There was a time I felt small in the face of the struggles
               around me — the inequality, the silence, the weight of “that’s
@@ -100,25 +107,98 @@ export default function AboutPage() {
               way through the cracks.
             </p>
 
-            <p className={`${sourceSans.className} text-gray-400 italic`}>
-              &quot;Even if I can’t change the world right now, I can tell a story
-              that reminds us it’s worth saving.&quot;
+            <p className={`${sourceSans.className} italic`}>
+              &quot;Even if I can’t change the world right now, I can tell a
+              story that reminds us it’s worth saving.&quot;
             </p>
           </div>
         </div>
       </section>
-      {/* SOCIALS SECTION */}
-      <section className="bg-[#0b0b0b] text-white py-20 relative overflow-hidden">
-        {/* Subtle glowing background */}
-        <div className="absolute inset-0 bg-linear-to-t from-purple-900/10 via-transparent to-transparent blur-3xl pointer-events-none" />
+      {/* READ ROTR HERE */}
+      <section className="py-20">
+        <div className="max-w-6xl mx-auto">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className={`${orbitron.className} text-3xl md:text-4xl font-bold mb-12 text-center`}
+          >
+            Read Rise of the Rejects Here
+          </motion.h2>
 
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center overflow-hidden px-4 md:px-0">
+            {/* Book Cover Image */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="flex justify-center md:justify-start"
+            >
+              <div className="w-full max-w-sm overflow-hidden rounded-2xl">
+                <Image
+                  src="/images/rotr-cinematic-variant-2.jpg"
+                  alt="Rise of the Rejects - Book Cover"
+                  width={400}
+                  height={600}
+                  className="rounded-2xl w-full h-auto object-cover border border-purple-600/20 shadow-[0_0_40px_-10px_rgba(168,85,247,0.3)]"
+                  priority
+                />
+              </div>
+            </motion.div>
+
+            {/* Blurb Text */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="space-y-6 text-left"
+            >
+              <p className={`${sourceSans.className} text-lg leading-relaxed`}>
+                In a fractured future Nigeria, where the powerful hoard
+                resources and hope is a luxury reserved for the elite, a group
+                of outcasts refuse to accept their fate. Michael, Ben, Ayomide,
+                and others like them have been forgotten by the system—but they
+                won't be forgotten by history.
+              </p>
+
+              <p className={`${sourceSans.className} text-lg leading-relaxed`}>
+                When rebellion calls, they must choose: stay silent in safety,
+                or risk everything for a chance at something better. Their story
+                is messy, painful, and real—a testament to those who dare to
+                fight back against impossible odds.
+              </p>
+
+              <p className={`${sourceSans.className} italic text-gray-400`}>
+                Because sometimes, the most powerful act is simply refusing to
+                disappear.
+              </p>
+
+              <div className="pt-4">
+                <motion.a
+                  href="#"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="inline-block px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors duration-300"
+                >
+                  Start Reading
+                </motion.a>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+      {/* SOCIALS SECTION */}
+      <section className=" py-20 relative overflow-hidden">
         <div className="relative max-w-4xl mx-auto text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className={`${orbitron.className} text-3xl md:text-5xl font-bold mb-6`}
+            className={`${orbitron.className} text-3xl md:text-4xl font-bold mb-6`}
           >
             Let’s Be Friends
           </motion.h2>
@@ -128,7 +208,7 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.6 }}
             viewport={{ once: true }}
-            className={`${sourceSans.className} text-lg md:text-xl text-gray-300 mb-10`}
+            className={`${sourceSans.className} text-lg md:text-xl mb-10`}
           >
             Follow me for behind-the-scenes glimpses, creative updates, and the
             sparks that power Rise of the Rejects.
@@ -143,13 +223,12 @@ export default function AboutPage() {
                 rel="noopener noreferrer"
                 whileHover={{
                   scale: 1.1,
-                  y: -4, // just a little lift
                 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 250, damping: 14 }}
-                className={`flex items-center gap-3 text-gray-400 transition-all duration-300 ${social.color}`}
+                className={`flex items-center gap-3 transition-all duration-300 ${social.color}`}
               >
-                <span className="text-purple-400">{social.icon}</span>
+                <span>{social.icon}</span>
                 <span className="text-lg font-medium">{social.name}</span>
               </motion.a>
             ))}

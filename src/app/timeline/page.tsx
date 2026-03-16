@@ -17,7 +17,7 @@ const data = [
     content: (
       <div>
         <p
-          className={`${sourceSans.className} mb-8 text-xs font-normal text-[#e5e7e8] md:text-lg`}
+          className={`${sourceSans.className} mb-8 text-xs font-normal text-[#060506] md:text-lg`}
         >
           Serum I-960 is launched, marking the dawn of a new age. Ordinary
           Nigerians awaken to extraordinary abilities—strength, speed,
@@ -50,7 +50,7 @@ const data = [
     content: (
       <div>
         <p
-          className={`${sourceSans.className} mb-8 text-xs font-normal text-[#e5e7e8] md:text-lg`}
+          className={`${sourceSans.className} mb-8 text-xs font-normal text-[#060506] md:text-lg`}
         >
           Tensions between empowered individuals and those left behind finally
           ignite. Cities burn as factions rise, each fighting for dominance and
@@ -83,7 +83,7 @@ const data = [
     content: (
       <div>
         <p
-          className={`${sourceSans.className} mb-8 text-xs font-normal text-[#e5e7e8] md:text-lg `}
+          className={`${sourceSans.className} mb-8 text-xs font-normal text-[#060506] md:text-lg `}
         >
           In the aftermath of chaos, one man emerges from the shadows: Jide. A
           charismatic leader with promises of rebuilding Nigeria into a shining
@@ -115,7 +115,7 @@ const data = [
     content: (
       <div>
         <p
-          className={`${sourceSans.className} mb-8 text-xs font-normal text-[#e5e7e8] md:text-lg`}
+          className={`${sourceSans.className} mb-8 text-xs font-normal text-[#060506] md:text-lg`}
         >
           Jide tightens his grip. Under the guise of national security, border
           checkpoints sprout across the nation—harmless at first glance, but
@@ -147,7 +147,7 @@ const data = [
     content: (
       <div>
         <p
-          className={`${sourceSans.className} mb-8 text-xs font-normal text-[#e5e7e8] md:text-lg `}
+          className={`${sourceSans.className} mb-8 text-xs font-normal text-[#060506] md:text-lg `}
         >
           Nigeria now exists as a totalitarian state. Surveillance is constant,
           rebellion is crushed before it can form, and Nullisyn keeps the masses

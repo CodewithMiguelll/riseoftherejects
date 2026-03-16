@@ -22,7 +22,7 @@ export default function RejectsPage() {
           The Rejects
         </h1>
         <p
-          className={`${sourceSans.className} text-gray-700 text-lg md:text-xl mt-4 max-w-3xl mx-auto`}
+          className={`${sourceSans.className} text-lg md:text-xl mt-4 max-w-3xl mx-auto`}
         >
           Outcasts. Survivors. Dreamers. They are the forgotten who refused to
           vanish — the heartbeat of rebellion beneath a silent sky.
@@ -62,7 +62,7 @@ export default function RejectsPage() {
             Forged in Defiance
           </h2>
           <p
-            className={`${sourceSans.className} text-gray-300 text-lg leading-relaxed`}
+            className={`${sourceSans.className} text-lg leading-relaxed`}
           >
             Born from the ashes of a forgotten people, the Rejects forged their
             unity in darkness. The world called them lost — but they built a
