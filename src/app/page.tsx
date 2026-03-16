@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FocusCards } from "@/components/ui/focus-cards";
 import { ParallaxScroll } from "@/components/ui/parallax-scroll";
 import BlurText from "@/components/BlurText";
+import { motion } from "motion/react";
 
 import Image from "next/image";
 
@@ -94,12 +95,12 @@ export default function Home() {
           </p>
           <div className="flex flex-row items-center justify-center gap-4.5 mt-5">
             <Link href="/characters">
-              <button className="transition-all bg-[#314062] hover:bg-[#c4b6c1cc] text-[#ebeef1] p-4 rounded-md hover:-translate-y-1 cursor-none font-family-body">
+              <button className="transition-all bg-[#6008b3] hover:bg-[#6008b3c7] text-[#ebeef1] p-4 rounded-md hover:-translate-y-1 cursor-none font-family-body">
                 Meet The Characters
               </button>
             </Link>
             <Link href="/factions">
-              <button className="transition-all bg-[#5d4b51] hover:bg-[#5d4b51cc] p-4 rounded-md hover:-translate-y-1 cursor-none font-family-body">
+              <button className="transition-all bg-[#060506] hover:bg-[#060506c7] text-[#ebeef1] p-4 rounded-md hover:-translate-y-1 cursor-none font-family-body">
                 Pick A Side
               </button>
             </Link>
@@ -120,7 +121,7 @@ export default function Home() {
         </div>
         <div className="flex justify-center">
           <Link href="/factions" className="w-full max-w-sm">
-            <button className="w-full bg-[#c4b6c1] hover:bg-[#c4b6c1cc] text-[#060506] font-bold py-3 rounded hover:transition-all font-family-body cursor-none">
+            <button className="w-full bg-[#6008b3] hover:bg-[#6008b3c7] text-[#ebeef1] font-bold py-3 rounded hover:transition-all font-family-body cursor-none">
               Pick A Side
             </button>
           </Link>
@@ -153,7 +154,7 @@ export default function Home() {
         </div>
         <div className="flex justify-center items-center text-center">
           <Link href="/characters" className="w-full max-w-sm">
-            <button className="w-full bg-[#c4b6c1] hover:bg-[#c4b6c1cc] text-[#060506] font-bold py-3 rounded transition-all duration-100 ease-in-out cursor-none">
+            <button className="w-full bg-[#6008b3] hover:bg-[#6008b3c7] text-[#ebeef1] font-bold py-3 rounded transition-all duration-100 ease-in-out cursor-none">
               Meet The Characters
             </button>
           </Link>
@@ -220,7 +221,7 @@ export default function Home() {
         <div className="text-center mt-8">
           <Link
             href="/timeline"
-            className="inline-block cursor-none bg-[#c4b6c1] hover:bg-[#c4b6c1cc] text-[#060506] font-bold py-3 px-6 rounded transition-all duration-150 ease-in-out"
+            className="inline-block cursor-none bg-[#6008b3] hover:bg-[#6008b3c7] text-[#ebeef1] font-bold py-3 px-6 rounded transition-all duration-150 ease-in-out"
           >
             Explore the Full Timeline
           </Link>
@@ -242,33 +243,80 @@ export default function Home() {
       </section>
 
       {/* FOOTER CTA */}
-      <section className="py-10 px-4 text-center bg-[#998185] text-[#e5e7e8] rounded-lg mx-4 md:mx-20 mb-10">
-        <h2 className="text-2xl md:text-4xl font-bold mb-4 text-[#ebeef1] font-family-subheading">
-          This Is Just The Beginning
-        </h2>
-        <p className="mb-8 text-xs font-normal text-[#ebeef1] md:text-lg font-family-body">
-          The story of the Rejects is still being written. Step inside, and be
-          part of the legend.
-        </p>
-        <div className="flex justify-center items-center text-center gap-3.5">
-          <Link href="https://www.wattpad.com/story/407399764?utm_source=android&utm_medium=link&utm_content=share_writing&wp_page=create&wp_uname=Chikaimaaa_"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button className="bg-[#c4b6c1] hover:bg-[#c4b6c1cc] text-[#060506] cursor-none font-bold py-3 px-6 rounded transition-all">
-              Read the Book
-            </button>
-          </Link>
+      <section className="py-16 md:py-24 px-4 relative overflow-hidden mb-10">
+        {/* Background elements */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#998185]/20 via-[#5d4b51]/20 to-[#998185]/20 rounded-xl"></div>
+        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-600/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
 
-          <Link
-            href={"https://stage32.com/miguelwrites"}
-            target="_blank"
-            rel="noopener noreferrer"
+        <div className="relative max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
           >
-            <button className="bg-[#5d4b51] hover:bg-[#5d4b51cc] cursor-none text-[#efebee] font-bold py-3 px-6 rounded transition-all">
-              Follow The Author
-            </button>
-          </Link>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-[#ebeef1] font-family-subheading">
+              This Is Just The Beginning
+            </h2>
+          </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1, duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mb-12 text-base md:text-lg text-[#e5e7e8] font-family-body leading-relaxed"
+          >
+            The story of the Rejects is still being written. Step inside, become
+            part of the
+            <span className="text-purple-600 font-semibold"> rebellion</span>,
+            and discover a world where hope fights back.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            viewport={{ once: true }}
+            className="flex flex-col sm:flex-row justify-center items-center gap-4 md:gap-6"
+          >
+            <Link
+              href="https://www.wattpad.com/story/407399764?utm_source=android&utm_medium=link&utm_content=share_writing&wp_page=create&wp_uname=Chikaimaaa_"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto"
+            >
+              <motion.button
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 20px 25px -5px rgba(168, 85, 247, 0.3)",
+                }}
+                whileTap={{ scale: 0.95 }}
+                className="w-full bg-[#6008b3] hover:bg-[#6008b3c7] text-[#ebeef1] font-bold py-3 px-8 rounded-lg transition-all duration-300 cursor-none font-family-body text-lg"
+              >
+                Read the Book
+              </motion.button>
+            </Link>
+
+            <Link
+              href={"https://stage32.com/miguelwrites"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto"
+            >
+              <motion.button
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 20px 25px -5px rgba(168, 85, 247, 0.2)",
+                }}
+                whileTap={{ scale: 0.95 }}
+                className="w-full bg-[#060506] text-[#ebeef1] font-bold py-3 px-8 rounded-lg transition-all duration-300 cursor-none font-family-body text-lg border border-[#6d5b61]/50"
+              >
+                Follow The Author
+              </motion.button>
+            </Link>
+          </motion.div>
         </div>
       </section>
     </>
