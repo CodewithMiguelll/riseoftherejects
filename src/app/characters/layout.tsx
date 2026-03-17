@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description:
     "Explore the defiant Rejects and the powerful Uppers — the characters that define Rise of the Rejects.",
   openGraph: {
-    title: "Characters | Rise of the Rejects",
+    title: "Characters",
     description:
       "Meet the heroes, villains, and survivors that shape the world of Rise of the Rejects.",
     images: [

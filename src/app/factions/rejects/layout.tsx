@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "The Rejects | Rise of the Rejects",
+  title: "The Rejects",
   description:
     "Meet the Rejects — the outcasts and revolutionaries of Rise of the Rejects, fighting to reclaim hope and freedom from the Uppers’ tyranny.",
   openGraph: {
-    title: "The Rejects | Rise of the Rejects",
+    title: "The Rejects",
     description:
       "Discover the Rejects — survivors forged by fire and united by rebellion. Explore their story in Rise of the Rejects.",
     type: "website",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Rejects | Rise of the Rejects",
+    title: "The Rejects",
     description:
       "Outcasts. Survivors. Dreamers. The Rejects rise from the ashes to fight for the forgotten.",
     images: ["/images/rejects-logo.png"],

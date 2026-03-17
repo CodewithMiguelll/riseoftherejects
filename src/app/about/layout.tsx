@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "About | Rise of the Rejects",
+    title: "About",
     description:
       "Learn more about the creator of ROTR and the message behind the rebellion.",
     images: ["/assets/og-image-about.png"],

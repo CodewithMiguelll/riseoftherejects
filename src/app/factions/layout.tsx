@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Factions | Rise of the Rejects",
+  title: "Factions",
   description:
     "Discover the factions vying for control in the fractured world of Rise of the Rejects — from the towering Uppers to the defiant Rejects.",
   openGraph: {
-    title: "Factions | Rise of the Rejects",
+    title: "Factions",
     description:
       "Meet the Uppers, Lowers, and Rejects — three factions locked in a struggle for power, freedom, and survival.",
     url: "https://riseoftherejects.com/factions",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Factions | Rise of the Rejects",
+    title: "Factions",
     description:
       "Discover the factions shaping the rebellion — the Uppers, the Lowers, and the Rejects.",
     images: ["/assets/og-image-factions.jpg"],

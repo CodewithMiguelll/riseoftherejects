@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "The Uppers | Rise of the Rejects",
+  title: "The Uppers",
   description:
     "Meet the Uppers — Nigeria’s ruling elite in Rise of the Rejects. They control order, power, and progress… at a cost.",
   openGraph: {
-    title: "The Uppers | Rise of the Rejects",
+    title: "The Uppers",
     description:
       "Explore the world of the Uppers — the elite faction shaping the Republic’s destiny in Rise of the Rejects.",
     type: "website",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Uppers | Rise of the Rejects",
+    title: "The Uppers",
     description:
       "Power. Control. Order. The Uppers rule the Republic — but for how long?",
     images: ["/images/uppers-logo.png"],

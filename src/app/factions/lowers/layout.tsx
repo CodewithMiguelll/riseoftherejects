@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "The Lowers | Rise of the Rejects",
+  title: "The Lowers",
   description:
     "Discover the Lowers — the silent workforce that keeps the Republic alive, bearing the burden of oppression with unbroken spirit.",
   openGraph: {
-    title: "The Lowers | Rise of the Rejects",
+    title: "The Lowers",
     description:
       "They build the world but are denied its light. Explore the Lowers — resilient, steadfast, and waiting for their dawn.",
     type: "website",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Lowers | Rise of the Rejects",
+    title: "The Lowers",
     description:
       "The hands that build, the hearts that endure. The Lowers rise quietly beneath the weight of a divided Republic.",
     images: ["/images/lowers-logo.png"],

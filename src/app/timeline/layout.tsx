@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Timeline | Rise of the Rejects",
+  title: "Timeline of Events",
   description:
     "Trace the events that shaped the fractured world of Rise of the Rejects — from the birth of power to the rise of rebellion.",
   openGraph: {
-    title: "Timeline | Rise of the Rejects",
+    title: "Timeline of Events",
     description:
       "Dive into the key moments that defined the struggle between Uppers, Lowers, and Rejects.",
     images: [
