@@ -58,7 +58,7 @@ const Navigation = () => {
         {/* Brand */}
         <div className="text-3xl md:text-4xl">
           <Link href="/" className="relative group block">
-            <span className={`${rubik_glitch.className} text-[#060506] cursor-none`}>ROTR</span>
+            <span className={`${rubik_glitch.className} text-gray-600 mix-blend-difference cursor-none`}>ROTR</span>
           </Link>
         </div>
 
@@ -91,10 +91,10 @@ const Navigation = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={toggleMenu}
-          className="md:hidden text-gray-300 hover:text-white transition-colors"
+          className="md:hidden text-gray-300 hover:text-white transition-colors mix-blend-difference"
           aria-label="Toggle menu"
         >
-          {isOpen ? <X size={26} /> : <Menu size={26} />}
+          {isOpen ? <X className="text-gray-600" size={26} /> : <Menu className="text-gray-600" size={26} />}
         </button>
       </div>
 
