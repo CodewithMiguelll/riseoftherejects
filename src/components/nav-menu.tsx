@@ -94,7 +94,7 @@ const Navigation = () => {
           className="md:hidden text-gray-300 hover:text-white transition-colors mix-blend-difference"
           aria-label="Toggle menu"
         >
-          {isOpen ? <X className="text-gray-600" size={26} /> : <Menu className="text-gray-600" size={26} />}
+          {isOpen ? <X className="text-gray-600n for improved readabli" size={26} /> : <Menu className="text-gray-600" size={26} />}
         </button>
       </div>
 
