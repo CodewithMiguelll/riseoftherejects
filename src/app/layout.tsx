@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     title: "Rise Of The Rejects",
     description:
       "Join the rebellion. Discover the world of ROTR — where hope rises from the ashes.",
-    images: ["/assets/og-image-default.jpg"],
+    images: "/assets/og-image-default.png",
   },
   metadataBase: new URL("https://riseoftherejects.vercel.app"),
 };
