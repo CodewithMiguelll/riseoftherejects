@@ -178,7 +178,7 @@ export default function AboutPage() {
 
               <div className="pt-4">
                 <motion.a
-                  href="#"
+                  href="https://www.wattpad.com/story/407399764?utm_source=android&utm_medium=link&utm_content=share_writing&wp_page=create&wp_uname=Chikaimaaa_"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="inline-block px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors duration-300"
