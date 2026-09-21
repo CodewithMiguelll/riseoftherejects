@@ -282,7 +282,7 @@ export default function Home() {
             className="flex flex-col sm:flex-row justify-center items-center gap-4 md:gap-6"
           >
             <Link
-              href="https://www.wattpad.com/story/407399764?utm_source=android&utm_medium=link&utm_content=share_writing&wp_page=create&wp_uname=Chikaimaaa_"
+              href="https://www.amazon.com//dp/B0HBLP2ZVZ"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto"
@@ -300,7 +300,7 @@ export default function Home() {
             </Link>
 
             <Link
-              href={"https://stage32.com/miguelwrites"}
+              href={"https://x.com/Chikaimaaa"}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto"
