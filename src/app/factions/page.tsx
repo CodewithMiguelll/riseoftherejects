@@ -17,7 +17,7 @@ const factions = [
     name: "Uppers",
     slogan: "Order Above All",
     description:
-      "From the glass towers of Eko Prime, the Uppers govern with a promise of stability—and an iron fist. Architects of progress built on control.",
+      "From the glass towers of Bulwark Tower, the Uppers govern with a promise of stability—and an iron fist. Architects of progress built on control.",
     image: "/images/uppers-logo.png",
     accent: "text-cyan-400",
     line: "bg-cyan-500",
