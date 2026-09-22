@@ -77,7 +77,7 @@ export const characters: Record<"rejects" | "uppers", Character[]> = {
     {
       name: "Jide Balogun",
       role: "Supreme Leader of Powered Nigeria",
-      power: "Unknown",
+      power: "Siphoning",
       slug: "jide",
       faction: "uppers",
       image: "/images/jide-poster.png",
